@@ -6,6 +6,37 @@ const observer = new IntersectionObserver(entries => entries.forEach(entry => {
 }), { threshold: .12 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+const projectPreviews = {
+  ima: { src: 'ima-cover-art.png', alt: 'Arte editorial sobre o sistema agropecuário do IMA', label: 'IMA', title: 'IMA — Cadastro Agropecuário', description: 'Redesenho de um sistema público para organizar propriedades, produtores e fluxos de fiscalização.', tags: ['Product Design', 'Design System', 'Figma', 'React'] },
+  alumni: { src: 'alumni-cover-art.png', alt: 'Arte editorial sobre a comunidade Alumni ESAL UFLA', label: 'ALUMNI', title: 'Alumni ESAL UFLA', description: 'Plataforma que aproxima ex-alunos e transforma conexão em impacto para a educação.', tags: ['UX/UI Design', 'Web Design', 'Comunidade'] },
+  eco: { src: 'eco-cover-art.png', alt: 'Arte editorial sobre floresta, dados e créditos de carbono', label: 'ECO', title: 'Eco — Créditos de Carbono', description: 'Marketplace B2B que conecta preservação, empresas e impacto ambiental com transparência.', tags: ['Product Design', 'Web B2B', 'Marketplace'] }
+};
+Object.entries(projectPreviews).forEach(([project, preview]) => {
+  const visual = document.querySelector(`[data-project="${project}"] .project-visual`);
+  if (!visual) return;
+  const label = visual.querySelector('.case-preview-label');
+  const image = new Image();
+  image.className = 'project-preview';
+  image.src = preview.src;
+  image.alt = preview.alt;
+  const action = document.createElement('a');
+  action.className = 'project-preview-action';
+  action.href = `case.html?project=${project}`;
+  action.setAttribute('aria-label', `Abrir case ${preview.title}`);
+  action.innerHTML = `<b aria-hidden="true">↗</b>`;
+  visual.replaceChildren(image, action);
+  const card = visual.closest('.project');
+  card.querySelector('.project-info')?.remove();
+  const heading = document.createElement('div');
+  heading.className = 'project-card-heading';
+  heading.innerHTML = `<span>${project === 'ima' ? '01' : project === 'alumni' ? '02' : '03'} / PROJETO</span><h3>${preview.title}</h3>`;
+  const footer = document.createElement('div');
+  footer.className = 'project-card-footer';
+  footer.innerHTML = `<p>${preview.description}</p><div>${preview.tags.map(tag => `<i>${tag}</i>`).join('')}</div>`;
+  visual.before(heading);
+  visual.after(footer);
+});
+
 const rotatingPhrase = document.querySelector('.rotating-phrase');
 if (rotatingPhrase) {
   const phrases = [
