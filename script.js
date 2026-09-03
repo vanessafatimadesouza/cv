@@ -9,7 +9,8 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const projectPreviews = {
   ima: { src: 'ima-cover-art.png', alt: 'Arte editorial sobre o sistema agropecuário do IMA', label: 'IMA', title: 'IMA — Cadastro Agropecuário', description: 'Redesenho de um sistema público para organizar propriedades, produtores e fluxos de fiscalização.', tags: ['Product Design', 'Design System', 'Figma', 'React'] },
   alumni: { src: 'alumni-cover-art.png', alt: 'Arte editorial sobre a comunidade Alumni ESAL UFLA', label: 'ALUMNI', title: 'Alumni ESAL UFLA', description: 'Plataforma que aproxima ex-alunos e transforma conexão em impacto para a educação.', tags: ['UX/UI Design', 'Web Design', 'Comunidade'] },
-  eco: { src: 'eco-cover-art.png', alt: 'Arte editorial sobre floresta, dados e créditos de carbono', label: 'ECO', title: 'Eco — Créditos de Carbono', description: 'Marketplace B2B que conecta preservação, empresas e impacto ambiental com transparência.', tags: ['Product Design', 'Web B2B', 'Marketplace'] }
+  eco: { src: 'eco-cover-art.png', alt: 'Arte editorial sobre floresta, dados e créditos de carbono', label: 'ECO', title: 'Eco — Créditos de Carbono', description: 'Marketplace B2B que conecta preservação, empresas e impacto ambiental com transparência.', tags: ['Product Design', 'Web B2B', 'Marketplace'] },
+  'art-screen': { src: 'art-screen-background.png', alt: 'Interface do Art Screen, uma galeria digital de obras do Metropolitan Museum of Art', label: 'ART SCREEN', title: 'Art Screen — Galeria Digital', description: 'Experiência para transformar uma tela em galeria: a pessoa escolhe uma atmosfera e contempla obras Open Access do acervo do Met.', tags: ['Experience Design', 'Front-end', 'Met Collection API'] },
 };
 Object.entries(projectPreviews).forEach(([project, preview]) => {
   const visual = document.querySelector(`[data-project="${project}"] .project-visual`);
@@ -29,7 +30,7 @@ Object.entries(projectPreviews).forEach(([project, preview]) => {
   card.querySelector('.project-info')?.remove();
   const heading = document.createElement('div');
   heading.className = 'project-card-heading';
-  heading.innerHTML = `<span>${project === 'ima' ? '01' : project === 'alumni' ? '02' : '03'} / PROJETO</span><h3>${preview.title}</h3>`;
+  heading.innerHTML = `<span>${project === 'ima' ? '01' : project === 'alumni' ? '02' : project === 'eco' ? '03' : '04'} / PROJETO</span><h3>${preview.title}</h3>`;
   const footer = document.createElement('div');
   footer.className = 'project-card-footer';
   footer.innerHTML = `<p>${preview.description}</p><div>${preview.tags.map(tag => `<i>${tag}</i>`).join('')}</div>`;
@@ -66,7 +67,8 @@ document.querySelectorAll('.magnetic').forEach(el => {
 const cases = {
   ima: { tag:'PRODUCT DESIGN · DESIGN SYSTEM', title:'IMA — Cadastro Agropecuário', text:'Sistema governamental para o Instituto Mineiro de Agropecuária. O trabalho organizou fluxos complexos e criou uma base visual consistente para dar velocidade ao produto e clareza aos usuários.', stats:['3.500+ conexões no Figma','800+ variáveis','45+ componentes'] },
   alumni: { tag:'UX/UI · COMMUNITY', title:'Alumni ESAL UFLA', text:'Uma experiência digital feita para aproximar gerações de ex-alunos e transformar conexão em impacto concreto para a educação.', stats:['R$ 2M+ arrecadados','Comunidade ativa','Experiência responsiva'] },
-  eco: { tag:'PRODUCT DESIGN · WEB', title:'Eco — Créditos de Carbono', text:'Plataforma completa de comercialização de créditos de carbono com marketplace, métricas de impacto e transações transparentes.', stats:['8.5M+ t CO₂','Dashboard em tempo real','Marketplace certificado'] }
+  eco: { tag:'PRODUCT DESIGN · WEB', title:'Eco — Créditos de Carbono', text:'Plataforma completa de comercialização de créditos de carbono com marketplace, métricas de impacto e transações transparentes.', stats:['8.5M+ t CO₂','Dashboard em tempo real','Marketplace certificado'] },
+  'art-screen': { tag: 'EXPERIENCE DESIGN · FRONT-END', title: 'Art Screen — Galeria Digital', text: 'Experiência minimalista que transforma uma tela em galeria, com obras Open Access do Metropolitan Museum of Art e controles pensados para contemplação.', stats: ['6 atmosferas', 'Obras em domínio público', 'HTML, CSS e JavaScript'] }
 };
 const modal = document.querySelector('.case-modal');
 document.querySelectorAll('.project-trigger').forEach(btn => btn.addEventListener('click', () => {
