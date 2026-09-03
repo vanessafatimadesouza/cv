@@ -15,6 +15,7 @@
     .project-visual .case-preview-label{top:0;left:0;right:0;display:flex;align-items:center;min-height:82px;padding:18px 28px;background:var(--ink);color:#fff;font:700 clamp(1.3rem,2.2vw,2.2rem)/1 Manrope;letter-spacing:-.055em;text-shadow:none;border-radius:0}.project-preview-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.project-preview-tags i{padding:6px 9px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font:600 10px Manrope;font-style:normal;letter-spacing:.04em}
     .project-card-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin:0 0 18px}.project-card-heading>span{font:600 11px Manrope;letter-spacing:.14em;color:var(--muted)}.project-card-heading h3{margin:0;font:600 clamp(1.4rem,2.25vw,2.25rem)/1 Manrope;letter-spacing:-.055em}.project-card-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding:17px 0 0;border-top:1px solid var(--line)}.project-card-footer p{max-width:520px;margin:0;color:var(--muted);font-size:14px;line-height:1.5}.project-card-footer>div{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}.project-card-footer i{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font:600 10px Manrope;font-style:normal;white-space:nowrap}.project-preview-action{background:transparent!important;opacity:1!important}.project-preview-action small,.project-preview-action strong,.project-preview-action span,.project-preview-action .project-preview-tags{display:none}.project-preview-action b{opacity:0;transform:translateY(8px);transition:.25s}.project-visual:hover .project-preview-action b,.project-preview-action:focus-visible b{opacity:1;transform:none}@media(max-width:800px){.project-card-heading{display:block;margin-bottom:13px}.project-card-heading h3{margin-top:8px}.project-card-footer{display:block}.project-card-footer>div{justify-content:flex-start;margin-top:14px}.project-preview-action b{opacity:1;transform:none}}
     /* Hierarquia final dos cards. */
+    .project-pair .project-art-screen{margin-top:0}
     .project-card-heading{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:24px;margin-bottom:16px}.project-card-heading>span{font-size:10px}.project-card-heading h3{font-size:clamp(1.25rem,1.8vw,1.85rem);line-height:1.08;letter-spacing:-.045em}.project-card-footer{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}.project-card-footer p{line-height:1.55}@media(max-width:800px){.project-card-heading,.project-card-footer{display:block}}
   </style>
 </head>
@@ -94,21 +95,21 @@
           <div class="project-visual visual-alumni"><span class="case-preview-label">IMAGEM DO PROJETO · ALUMNI</span><div class="phone"><div class="phone-screen"><small>ALUMNI ESAL</small><h4>Juntos, fazemos a diferença.</h4><div class="donation">R$ 2M+<span>arrecadados</span></div><button>Quero contribuir</button></div></div><span class="shape flower">✦</span></div>
           <div class="project-info"><div><span class="project-number">02</span><span class="project-type">UX/UI · COMMUNITY</span></div><h3>Alumni ESAL UFLA</h3><p>Plataforma que conecta ex-alunos e facilita doações para projetos educacionais.</p><a class="text-link" href="case.html?project=alumni">Ver case <span>↗</span></a></div>
         </article>
-        <article class="project reveal" data-project="eco">
-          <div class="project-visual visual-eco"><span class="case-preview-label">IMAGEM DO PROJETO · ECO</span><div class="eco-card"><span>eco</span><small>créditos de carbono</small><div class="eco-chart"><i></i><i></i><i></i><i></i></div><b>+8.5M t CO₂</b></div><div class="eco-ring"></div></div>
-          <div class="project-info"><div><span class="project-number">03</span><span class="project-type">PRODUCT DESIGN · WEB</span></div><h3>Eco — Créditos de Carbono</h3><p>Marketplace transparente para conectar quem preserva a empresas que desejam compensar.</p><a class="text-link" href="case.html?project=eco">Ver case <span>↗</span></a></div>
+        <article class="project project-art-screen reveal" data-project="art-screen">
+          <div class="project-visual visual-art-screen">
+            <img src="art-screen-cover-art.png" alt="Composição editorial do Art Screen com a interface exibida em uma galeria digital" style="filter:none">
+          </div>
+          <div class="project-info"><div><span class="project-number">04</span><span class="project-type">EXPERIENCE DESIGN · FRONT-END</span></div><h3>Art Screen — Galeria Digital</h3><p>Uma experiência contemplativa que transforma um segundo monitor em uma pequena galeria pessoal.</p><div class="project-actions"><a class="text-link" href="case.html?project=art-screen">Ver case <span>↗</span></a><a class="text-link" href="https://vanessafatimadesouza.github.io/art-screen/" target="_blank" rel="noreferrer">Abrir experiência <span>↗</span></a></div></div>
         </article>
       </div>
 
-      <article class="project project-art-screen reveal" data-project="art-screen">
-        <div class="project-visual visual-art-screen">
-          <img src="art-screen-cover-art.png" alt="Composição editorial do Art Screen com a interface exibida em uma galeria digital" style="filter:none">
-        </div>
+      <article class="project project-featured project-eco reveal" data-project="eco">
+        <div class="project-visual visual-eco"><span class="case-preview-label">IMAGEM DO PROJETO · ECO</span><div class="eco-card"><span>eco</span><small>créditos de carbono</small><div class="eco-chart"><i></i><i></i><i></i><i></i></div><b>+8.5M t CO₂</b></div><div class="eco-ring"></div></div>
         <div class="project-info">
-          <div><span class="project-number">04</span><span class="project-type">EXPERIENCE DESIGN · FRONT-END</span></div>
-          <h3>Art Screen — Galeria Digital</h3>
-          <p>Uma experiência contemplativa que transforma um segundo monitor em uma pequena galeria pessoal, com curadoria por atmosferas e obras Open Access do Metropolitan Museum of Art.</p>
-          <div class="project-actions"><a class="text-link" href="case.html?project=art-screen">Ver case <span>↗</span></a><a class="text-link" href="https://vanessafatimadesouza.github.io/art-screen/" target="_blank" rel="noreferrer">Abrir experiência <span>↗</span></a></div>
+          <div><span class="project-number">03</span><span class="project-type">PRODUCT DESIGN · WEB</span></div>
+          <h3>Eco — Créditos de Carbono</h3>
+          <p>Marketplace transparente para conectar quem preserva a empresas que desejam compensar.</p>
+          <a class="text-link" href="case.html?project=eco">Ver case <span>↗</span></a>
         </div>
       </article>
     </section>
