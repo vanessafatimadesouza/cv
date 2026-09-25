@@ -16,6 +16,10 @@ body.static-case{background:var(--paper)}
 .static-case--hive .static-cover{background:#1d222c}
 .case-story{max-width:1180px;margin:auto;padding:0 32px 100px}
 .case-story__intro{max-width:68ch;margin:0;padding:90px 0 60px;color:#383934;font-size:clamp(1.35rem,2vw,1.85rem);line-height:1.5}
+.case-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 0 35px}
+.case-overview>div{padding:20px 0 24px;border-top:1px solid var(--line)}
+.case-overview dt{margin-bottom:17px;color:var(--violet);font:700 11px Manrope;letter-spacing:.12em;text-transform:uppercase}
+.case-overview dd{max-width:34ch;margin:0;color:#343631;font:500 clamp(15px,1.25vw,18px)/1.5 Manrope}
 .story-block{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:clamp(35px,7vw,100px);padding:62px 0;border-top:1px solid var(--line)}
 .story-block .section-index{color:var(--violet)}
 .story-block h2{max-width:16ch;margin:20px 0 0;font:600 clamp(2.1rem,3.5vw,3.8rem)/1.03 Manrope;letter-spacing:-.06em}
@@ -53,6 +57,9 @@ body.static-case{background:var(--paper)}
   .static-cover h1{font-size:clamp(3rem,10vw,5rem)}
   .case-story{padding:0 22px 70px}
   .case-story__intro{padding:65px 0 45px}
+  .case-overview{grid-template-columns:1fr;gap:0;margin-bottom:20px}
+  .case-overview>div{padding:17px 0}
+  .case-overview dt{margin-bottom:8px}
   .story-block{gap:26px;padding:47px 0}
   .static-footer{padding:32px 22px}
 }

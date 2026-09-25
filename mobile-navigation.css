@@ -1,0 +1,51 @@
+@media (max-width: 800px) {
+  .nav-shell,
+  .profile-page .nav-shell,
+  .static-case .nav-shell {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 44px 44px;
+    align-items: center;
+    height: auto;
+    padding: 7px 12px 5px;
+  }
+
+  .nav-shell nav {
+    display: flex;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-width: 0;
+    border-top: 1px solid rgba(30, 30, 25, .16);
+  }
+
+  .nav-shell nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 3px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .nav-shell .logo { grid-column: 1; grid-row: 1; }
+  .nav-shell .nav-cta { grid-column: 2; grid-row: 1; }
+
+  .hero { padding-top: 155px; }
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.7rem, 11vw, 3.1rem);
+    line-height: .98;
+  }
+  .hero h1 em::before { content: "\00a0"; }
+  .profile-hero { padding-top: 170px; }
+  .static-cover { padding-top: 170px; }
+  [id] { scroll-margin-top: 125px; }
+}
+
+.nav-shell a:focus-visible {
+  outline: 3px solid #6555e8;
+  outline-offset: 3px;
+}

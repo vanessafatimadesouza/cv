@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="portfolio-update.css">
+  <link rel="stylesheet" href="mobile-navigation.css">
   <style>
     /* Artes de capa dos projetos; as telas reais aparecem nos cases. */
     .project-visual .project-preview{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.visual-ima .project-preview{object-fit:contain}.project-visual:hover .project-preview{transform:scale(1.025)}.project-featured .project-visual{height:clamp(280px,34vw,440px);aspect-ratio:auto}.project-pair .project-visual{height:clamp(250px,25vw,340px);aspect-ratio:auto}.visual-ima{background:var(--ink)}.visual-alumni{background:var(--violet)}.visual-eco{background:#155642}.project-visual .case-preview-label{z-index:2;top:24px;left:28px;padding:0;border:0;border-radius:0;background:none!important;color:#fff;font:600 12px Manrope;letter-spacing:.09em;text-shadow:0 1px 10px rgba(0,0,0,.55)}.project-preview-action{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;background:linear-gradient(180deg,transparent 34%,rgba(10,14,12,.86));opacity:0;transition:opacity .3s ease}.project-preview-action:focus-visible{opacity:1;outline:3px solid var(--acid);outline-offset:-5px}.project-visual:hover .project-preview-action{opacity:1}.project-preview-action small{font:600 10px Manrope;letter-spacing:.14em}.project-preview-action strong{margin-top:9px;font:600 clamp(1.5rem,2.4vw,2.5rem)/1 Manrope;letter-spacing:-.05em}.project-preview-action span{max-width:490px;margin-top:10px;font-size:14px;line-height:1.45}.project-preview-action b{position:absolute;right:28px;bottom:28px;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--acid);color:var(--ink);font-size:22px}@media(max-width:800px){.project-preview-action{padding:22px;opacity:1;background:linear-gradient(180deg,transparent 45%,rgba(10,14,12,.78))}.project-preview-action span{display:none}.project-preview-action b{right:20px;bottom:18px;width:42px;height:42px}}
@@ -49,72 +50,64 @@
       <div class="hero-orbit orbit-one" aria-hidden="true"></div>
       <div class="hero-orbit orbit-two" aria-hidden="true"></div>
       <div class="eyebrow reveal"><span class="status-dot"></span> Product Designer · UX Research · Design Engineering</div>
-      <h1 class="reveal">Transformo sistemas<br>complexos em produtos<br><em>claros e acessíveis.</em></h1>
+      <h1 class="reveal">Transformo sistemas <br>complexos em produtos <br><em>claros e acessíveis.</em></h1>
       <div class="hero-portrait reveal" aria-label="Vanessa Souza em uma interface digital">
         <div class="portrait-label">DESIGN · TECNOLOGIA · PESSOAS</div>
         <img src="vanessa-hero.jpg" alt="Retrato profissional de Vanessa Souza">
         <span class="portrait-orbit" aria-hidden="true"></span>
       </div>
       <div class="hero-bottom reveal">
-        <p>Olá, sou <strong>Vanessa Souza</strong> — Product Designer, Engenheira de Controle e Automação e pesquisadora em Interação Humano-Computador. Conecto pesquisa, design e front-end para construir produtos digitais viáveis.</p>
+        <p>Sou <strong>Vanessa Souza</strong>. Uno pesquisa, design e front-end para tornar sistemas complexos mais claros e acessíveis.</p>
         <a href="#projetos" class="round-link magnetic" aria-label="Ver projetos"><span>Ver projetos</span><b>↓</b></a>
       </div>
       <div class="scroll-note" aria-hidden="true">SCROLL PARA EXPLORAR <i></i></div>
     </section>
 
-    <section class="about section" id="sobre">
-      <div class="section-index reveal">01 / SOBRE</div>
-      <div class="about-copy reveal">
-        <h2>Da regra de negócio à interface, <span>clareza exige visão de sistema.</span></h2>
-      </div>
-      <div class="about-grid reveal">
-        <p>Sou Product Designer, Engenheira de Controle e Automação e formada em Análise e Desenvolvimento de Sistemas. Pesquiso Interação Humano-Computador e atuo em sistemas complexos: investigo o contexto de uso, traduzo requisitos em fluxos, valido decisões e acompanho a implementação.</p>
-        <div class="skills" aria-label="Especialidades">
-          <span>Product Discovery</span><span>UX Research</span><span>UI Design</span><span>Design Systems</span><span>Acessibilidade</span><span>Prototipação</span><span>Front-end</span><span>Validação</span><span>Requisitos</span><span>Engenharia de Software</span>
-        </div>
-      </div>
-      <a class="about-deep-link reveal" href="sobre/">Conheça minha atuação, pesquisa e liderança <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <section class="experience section" aria-labelledby="experience-title">
-      <div class="section-index reveal">EM ESCALA</div>
-      <h2 id="experience-title" class="reveal">Experiência traduzida em trabalho concreto.</h2>
-      <div class="experience-grid reveal">
-        <div><strong>120+</strong><span>módulos projetados e evoluídos</span></div>
-        <div><strong>30+</strong><span>interações profissionais de pesquisa, descoberta e validação com usuários e clientes</span></div>
-        <div><strong>5</strong><span>profissionais de UX/UI sob minha liderança</span></div>
-        <div><strong>7</strong><span>projetos levados além do Figma, com protótipos funcionais ou desenvolvimento</span></div>
-      </div>
-      <p class="experience-note reveal">Fluxo de prototipação rápida associado a aproximadamente 2x mais telas produzidas por sprint.</p>
-    </section>
-
     <section class="projects section" id="projetos" aria-labelledby="projects-title">
       <div class="projects-head reveal">
-        <div><div class="section-index">02 / PROJETOS</div><h2 id="projects-title">Produto, pesquisa<br>e engenharia em prática.</h2></div>
+        <div><div class="section-index">01 / PROJETOS</div><h2 id="projects-title">Produto, pesquisa<br>e engenharia em prática.</h2></div>
         <p>Projetos profissionais e autorais, organizados pelo contexto e pelo papel que desempenhei.</p>
       </div>
       <h3 class="project-group-title">Cases principais <span>01 — 04</span></h3>
       <div class="portfolio-grid">
         <article class="portfolio-card portfolio-card--lead portfolio-card--feature reveal">
-          <a class="portfolio-card__image" href="cases/ima/" aria-label="Ver case SIDAGRO / IMA"><img src="ima-cover-art.png" alt="Composição do sistema SIDAGRO para defesa agropecuária" loading="lazy"></a>
+          <a class="portfolio-card__image" href="cases/ima/" aria-label="Ver case SIDAGRO / IMA"><img src="ima-cover-art-1400.webp" srcset="ima-cover-art-700.webp 700w, ima-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Composição do sistema SIDAGRO para defesa agropecuária" loading="lazy"></a>
           <div class="portfolio-card__body"><span class="portfolio-card__number">01 / SISTEMA GOVERNAMENTAL</span><h4>SIDAGRO / IMA</h4><p class="portfolio-card__role">Product Design · UX Research · Design System</p><p>Sistema de defesa agropecuária com fluxos e regras de negócio de alta complexidade.</p><p class="portfolio-card__evidence">45+ componentes do design system · avaliação heurística em duas versões do sistema</p><a href="cases/ima/">Explorar case SIDAGRO / IMA ↗</a></div>
         </article>
       </div>
       <div class="portfolio-grid portfolio-grid--spotlight">
-        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/eco/" aria-label="Ver case Eco"><img src="eco-cover-art.png" alt="Floresta e dados na composição visual da plataforma Eco" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">02 / PLATAFORMA</span><h4>Eco — Créditos de Carbono</h4><p class="portfolio-card__role">Product Design · Web B2B</p><p>Marketplace que organiza negociação, simulação e acompanhamento de créditos de carbono.</p><a href="cases/eco/">Explorar case Eco ↗</a></div></article>
-        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/manejo/" aria-label="Ver case Manejo"><img src="manejo-cover-art.png" alt="Rebanho em paisagem rural na composição visual do Manejo" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">03 / PRODUTO FUNCIONAL</span><h4>Manejo — Gestão de Rebanho</h4><p class="portfolio-card__role">Product Design · Front-end</p><p>Rotina sanitária, reprodução e histórico do rebanho em uma plataforma web.</p><p class="portfolio-card__evidence">Interface funcional em React e Supabase.</p><a href="cases/manejo/">Explorar case Manejo ↗</a></div></article>
-        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/hive-mind/" aria-label="Ver case Hive Mind"><img src="hive-mind-cover-art.png" alt="Esfera luminosa do sistema pessoal Hive Mind" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">04 / SISTEMA PESSOAL</span><h4>Hive Mind</h4><p class="portfolio-card__role">Product Design · Obsidian · JavaScript</p><p>Espaço pessoal que conecta planejamento, tarefas, projetos, conhecimento e cultura.</p><a href="cases/hive-mind/">Explorar case Hive Mind ↗</a></div></article>
+        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/eco/" aria-label="Ver case Eco"><img src="eco-cover-art-1400.webp" srcset="eco-cover-art-700.webp 700w, eco-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Floresta e dados na composição visual da plataforma Eco" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">02 / PLATAFORMA</span><h4>Eco — Créditos de Carbono</h4><p class="portfolio-card__role">Product Design · Web B2B</p><p>Marketplace que organiza negociação, simulação e acompanhamento de créditos de carbono.</p><a href="cases/eco/">Explorar case Eco ↗</a></div></article>
+        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/manejo/" aria-label="Ver case Manejo"><img src="manejo-cover-art-1400.webp" srcset="manejo-cover-art-700.webp 700w, manejo-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Rebanho em paisagem rural na composição visual do Manejo" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">03 / PRODUTO FUNCIONAL</span><h4>Manejo — Gestão de Rebanho</h4><p class="portfolio-card__role">Product Design · Front-end</p><p>Rotina sanitária, reprodução e histórico do rebanho em uma plataforma web.</p><p class="portfolio-card__evidence">Interface funcional em React e Supabase.</p><a href="cases/manejo/">Explorar case Manejo ↗</a></div></article>
+        <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/hive-mind/" aria-label="Ver case Hive Mind"><img src="hive-mind-cover-art-1400.webp" srcset="hive-mind-cover-art-700.webp 700w, hive-mind-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Esfera luminosa do sistema pessoal Hive Mind" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">04 / SISTEMA PESSOAL</span><h4>Hive Mind</h4><p class="portfolio-card__role">Product Design · Obsidian · JavaScript</p><p>Espaço pessoal que conecta planejamento, tarefas, projetos, conhecimento e cultura.</p><a href="cases/hive-mind/">Explorar case Hive Mind ↗</a></div></article>
       </div>
       <h3 class="project-group-title project-group-title--secondary">Outros projetos <span>05 — 06</span></h3>
       <div class="portfolio-grid portfolio-grid--secondary">
         <article class="portfolio-card reveal">
-          <a class="portfolio-card__image" href="cases/alumni/" aria-label="Ver case Alumni ESAL-UFLA"><img src="alumni-cover-art.png" alt="Composição visual do site Alumni ESAL-UFLA" loading="lazy"></a>
+          <a class="portfolio-card__image" href="cases/alumni/" aria-label="Ver case Alumni ESAL-UFLA"><img src="alumni-cover-art-1400.webp" srcset="alumni-cover-art-700.webp 700w, alumni-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Composição visual do site Alumni ESAL-UFLA" loading="lazy"></a>
           <div class="portfolio-card__body"><span class="portfolio-card__number">05 / EDUCAÇÃO E COMUNIDADE</span><h4>Site Alumni ESAL-UFLA</h4><p class="portfolio-card__role">UX/UI Design · Arquitetura de informação</p><p>Site institucional que organiza histórias, cursos e caminhos de contribuição para ex-alunos.</p><p class="portfolio-card__evidence">Contexto da associação: mais de R$ 2M mobilizados.</p><a href="cases/alumni/">Explorar case Alumni ↗</a></div>
         </article>
         <article class="portfolio-card reveal">
-          <a class="portfolio-card__image" href="cases/art-screen/" aria-label="Ver case Art Screen"><img src="art-screen-cover-art.png" alt="Interface da galeria digital Art Screen" loading="lazy"></a>
+          <a class="portfolio-card__image" href="cases/art-screen/" aria-label="Ver case Art Screen"><img src="art-screen-cover-art-1400.webp" srcset="art-screen-cover-art-700.webp 700w, art-screen-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Interface da galeria digital Art Screen" loading="lazy"></a>
           <div class="portfolio-card__body"><span class="portfolio-card__number">06 / DESIGN ENGINEERING</span><h4>Art Screen</h4><p class="portfolio-card__role">Concepção · UI · Front-end · API</p><p>Galeria digital funcional para contemplar obras Open Access do Metropolitan Museum of Art.</p><p class="portfolio-card__evidence">Aplicação publicada · integração com a Met Collection API</p><a href="cases/art-screen/">Explorar case Art Screen ↗</a></div>
         </article>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="section-index reveal">02 / SOBRE</div>
+      <div class="about-main reveal">
+        <div class="about-copy">
+          <h2>Da regra de negócio à interface, <span>clareza exige visão de sistema.</span></h2>
+        </div>
+        <div class="skills" aria-label="Especialidades">
+          <span>Product Discovery</span><span>UX Research</span><span>Design Systems</span><span>Acessibilidade</span><span>Front-end</span><span>Requisitos</span>
+        </div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-intro">
+          <p>Investigo o contexto de uso, traduzo regras de negócio em fluxos e acompanho a implementação de produtos digitais.</p>
+        </div>
+        <a class="about-deep-link" href="sobre/"><span>Conheça minha atuação</span><span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -127,19 +120,8 @@
       <div class="research-grid">
         <article class="research-card research-card--feature reveal"><span>01 / INTERAÇÃO</span><h3>Eye tracking e SUS</h3><p>Pesquisa em Interação Humano-Computador com rastreamento ocular e avaliação de usabilidade em sistemas de informação.</p><div class="research-card__links"><a href="tcc-rastreamento-ocular-ima.pdf" target="_blank" rel="noreferrer">Ler trabalho de eye tracking <b>↗</b></a></div></article>
         <article class="research-card reveal"><span>02 / USABILIDADE</span><h3>Avaliação heurística em ciclos ágeis</h3><p>Em duas avaliações do SIDAGRO, uma no sistema legado e outra na versão redesenhada, o estudo identificou 43% menos problemas de usabilidade no total.</p><a href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_12" target="_blank" rel="noreferrer">Ler publicação sobre avaliação heurística <b>↗</b></a></article>
-        <article class="research-card reveal"><span>03 / ACESSIBILIDADE</span><h3>LLMs e inspeção de acessibilidade</h3><p>Pesquisa sobre modelos de linguagem aplicados à inspeção de acessibilidade em sistemas digitais.</p><small>LLMs · Acessibilidade · Inspeção</small></article>
+        <article class="research-card reveal"><span>03 / ACESSIBILIDADE</span><h3>LLMs e inspeção de acessibilidade</h3><p>Pesquisa sobre modelos de linguagem aplicados à inspeção de acessibilidade em sistemas digitais.</p><a href="artigo-llm-acessibilidade-web.pdf" target="_blank" rel="noopener noreferrer">Ler artigo sobre acessibilidade <b>↗</b></a></article>
         <article class="research-card research-card--dark reveal"><span>04 / ENGENHARIA DE REQUISITOS</span><h3>Requisitos para produtos mais adequados</h3><p>A pesquisa explora como compreender, organizar e comunicar requisitos para apoiar decisões de produto e construir soluções alinhadas às necessidades das pessoas.</p><a href="https://sol.sbc.org.br/index.php/washes/article/view/43005" target="_blank" rel="noreferrer">Ver publicação <b>↗</b></a></article>
-      </div>
-    </section>
-
-    <section class="process section">
-      <div class="section-index reveal">04 / COMO EU TRABALHO</div>
-      <h2 class="reveal">Clareza no processo.<br><span>Intenção no resultado.</span></h2>
-      <div class="process-list reveal">
-        <div><b>01</b><h3>Descobrir</h3><p>Entrevistas, contexto de uso, regras de negócio e necessidades.</p></div>
-        <div><b>02</b><h3>Definir</h3><p>Requisitos, jornadas, fluxos, hipóteses e prioridades.</p></div>
-        <div><b>03</b><h3>Criar</h3><p>Protótipos em alta fidelidade, Design Systems e versões funcionais.</p></div>
-        <div><b>04</b><h3>Validar e entregar</h3><p>Avaliação heurística, acessibilidade, testes, stakeholders, handoff e implementação.</p></div>
       </div>
     </section>
 

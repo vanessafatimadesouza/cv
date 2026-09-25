@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../about-page.css">
+  <link rel="stylesheet" href="../mobile-navigation.css">
 </head>
 <body class="profile-page">
   <header class="nav-shell">
@@ -50,9 +51,6 @@
       <div class="profile-intro__copy">
         <p>Sou Product Designer, Engenheira de Controle e Automação, formada também em Análise e Desenvolvimento de Sistemas e pesquisadora em Interação Humano-Computador.</p>
         <p>Trabalho na tradução de regras de negócio e necessidades de uso em fluxos, interfaces e sistemas mais claros. Minha atuação vai da descoberta e pesquisa à prototipação, validação e acompanhamento da implementação.</p>
-        <div class="profile-fields" aria-label="Áreas de atuação">
-          <span>Product Discovery</span><span>UX Research</span><span>UI Design</span><span>Design Systems</span><span>Acessibilidade</span><span>Requisitos</span><span>Prototipação</span><span>Front-end</span>
-        </div>
       </div>
     </section>
 
@@ -70,38 +68,46 @@
     </section>
 
     <section class="profile-work profile-container" id="atuacao" aria-labelledby="work-title">
-      <div class="profile-work__head"><div><span class="profile-index">03 / NA PRÁTICA</span><h2 id="work-title">Onde essa atuação ganha forma.</h2></div><p>Na FUNDECC, atuo em projetos governamentais estaduais ligados ao agronegócio e em avaliações especializadas de sistemas institucionais.</p></div>
+      <div class="profile-work__head"><div><span class="profile-index">03 / NA PRÁTICA</span><h2 id="work-title">Projetos e frentes de atuação.</h2></div><p>Minha atuação atravessa sistemas públicos, produtos digitais, desenvolvimento e pesquisa aplicada. Estes são alguns dos contextos em que esse trabalho aparece.</p></div>
 
       <div class="profile-work__list">
-        <article class="profile-work__item"><span>01 / GOVERNO</span><div><h3>SAF <small>· Sistema de Apoio ao Fiscal</small></h3><p>Apoio a atividades fiscais e ao controle de processos de emergência zoossanitária.</p></div></article>
-        <article class="profile-work__item"><span>02 / ASSISTENTE</span><div><h3>AFI <small>· Assistente Fiscal Inteligente</small></h3><p>Interface de perguntas e respostas apresentada na área de emergências sanitárias do SAF.</p></div></article>
-        <article class="profile-work__item"><span>03 / OUTRAS FRENTES</span><div><h3>AgroDigital e pesquisa aplicada</h3><p>AgroDigital integra a atuação em sistemas governamentais estaduais ligados ao agronegócio. Também realizo avaliações heurísticas e estruturais em sistemas institucionais e projetos de reconhecimento e monitoramento de bovinos em cochos, incluindo a análise da relação entre comportamento alimentar e produção leiteira.</p></div></article>
+        <article class="profile-work__item"><span>01 / GOVERNO</span><div><h3>Sistemas públicos e agro</h3><p><a href="../cases/ima/">SIDAGRO / IMA</a> reúne fluxos complexos, pesquisa e Design System. SAF, AFI e AgroDigital ampliam essa atuação em serviços e processos ligados à defesa agropecuária.</p></div></article>
+        <article class="profile-work__item"><span>02 / PRODUTOS</span><div><h3>Plataformas e serviços digitais</h3><p><a href="../cases/eco/">Eco</a>, <a href="../cases/manejo/">Manejo</a> e <a href="../cases/alumni/">Alumni ESAL-UFLA</a> mostram trabalhos em marketplace, gestão de rebanho e arquitetura de informação para uma comunidade de ex-alunos.</p></div></article>
+        <article class="profile-work__item"><span>03 / CÓDIGO</span><div><h3>Ideias que se tornam aplicações</h3><p><a href="../cases/hive-mind/">Hive Mind</a> e <a href="../cases/art-screen/">Art Screen</a> conectam concepção de interface e desenvolvimento funcional, de um sistema pessoal em Obsidian a uma galeria digital integrada a uma API.</p></div></article>
+        <article class="profile-work__item"><span>04 / PESQUISA</span><div><h3>Avaliação e pesquisa aplicada</h3><p>Avaliações heurísticas e rastreamento ocular no IMA, pesquisa em acessibilidade e estudos de reconhecimento e monitoramento de bovinos em cochos aproximam investigação e prática de design. <a href="#publicacoes">Ver publicações</a>.</p></div></article>
       </div>
     </section>
 
     <section class="profile-publications" id="publicacoes" aria-labelledby="publications-title">
       <div class="profile-container">
-        <div class="profile-publications__head"><div><span class="profile-index">04 / PESQUISA</span><h2 id="publications-title">Pesquisa que informa a prática.</h2></div><p>Publicações e trabalho acadêmico sobre avaliação de interfaces, Engenharia de Requisitos e interação humano-computador.</p></div>
+        <div class="profile-publications__head"><div><span class="profile-index">04 / PESQUISA</span><h2 id="publications-title">Pesquisa que informa a prática.</h2></div><p>Publicações e trabalho acadêmico sobre avaliação de interfaces, acessibilidade digital, Engenharia de Requisitos e interação humano-computador.</p></div>
         <div class="profile-publications__grid">
           <article class="paper-card">
-            <span class="paper-card__type"><span aria-hidden="true">▯</span> ARTIGO · IHC</span>
+            <span class="paper-card__type">ARTIGO · IHC</span>
             <h3>Applying Heuristic Evaluations Between Agile Sprints in the Development of a Governmental System: The Experience with the Minas Gerais Agricultural Institute</h3>
             <p class="paper-card__meta">Vanessa Fátima de Sousa e coautores · 2026</p>
-            <p class="paper-card__summary">Avaliações heurísticas entre sprints no desenvolvimento do SIDAGRO, um sistema governamental de defesa agropecuária.</p>
+            <p class="paper-card__summary">Compara a avaliação do sistema legado à da versão redesenhada do SIDAGRO.</p>
             <a href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_12" target="_blank" rel="noopener noreferrer" aria-label="Ler artigo sobre avaliações heurísticas no SIDAGRO (abre em nova aba)">Ler publicação <span aria-hidden="true">↗</span></a>
           </article>
           <article class="paper-card">
-            <span class="paper-card__type"><span aria-hidden="true">▯</span> ARTIGO · REQUISITOS</span>
+            <span class="paper-card__type">ARTIGO · REQUISITOS</span>
             <h3>Aplicação da Engenharia de Requisitos à Modernização de Sistemas Legados no Setor Público: Um Relato de Experiência</h3>
             <p class="paper-card__meta">Vanessa F. de Souza e coautores · 2026</p>
-            <p class="paper-card__summary">Relato de experiência sobre a aplicação da Engenharia de Requisitos na modernização de sistemas legados do setor público.</p>
+            <p class="paper-card__summary">Registra decisões de requisitos tomadas durante a modernização de sistemas públicos.</p>
             <a href="https://sol.sbc.org.br/index.php/washes/article/view/43005" target="_blank" rel="noopener noreferrer" aria-label="Ler artigo sobre Engenharia de Requisitos em sistemas legados (abre em nova aba)">Ler publicação <span aria-hidden="true">↗</span></a>
           </article>
           <article class="paper-card">
-            <span class="paper-card__type"><span aria-hidden="true">▯</span> TCC · EYE TRACKING</span>
+            <span class="paper-card__type">ARTIGO · ACESSIBILIDADE</span>
+            <h3>Abordagem Híbrida de Inspeção: Avaliação da Eficácia de Grandes Modelos de Linguagem no Diagnóstico de Acessibilidade Web</h3>
+            <p class="paper-card__meta">WebMedia 2026 · versão anonimizada</p>
+            <p class="paper-card__summary">Confronta respostas de LLMs com inspeções humanas anteriores em cinco telas.</p>
+            <a href="../artigo-llm-acessibilidade-web.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir artigo sobre LLMs e acessibilidade Web em PDF (abre em nova aba)">Ler artigo <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="paper-card">
+            <span class="paper-card__type">TCC · EYE TRACKING</span>
             <h3>Avaliação da Interação Humano-Computador via Rastreamento Ocular: Uma Experiência com o Instituto Mineiro de Agropecuária</h3>
             <p class="paper-card__meta">Vanessa Fátima de Souza · UFLA · 2026</p>
-            <p class="paper-card__summary">Uma experiência com o Instituto Mineiro de Agropecuária sobre avaliação da interação por rastreamento ocular.</p>
+            <p class="paper-card__summary">Usa dados de rastreamento ocular para examinar a interação com um sistema do IMA.</p>
             <a href="../tcc-rastreamento-ocular-ima.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir TCC sobre rastreamento ocular no IMA em PDF (abre em nova aba)">Ler trabalho <span aria-hidden="true">↗</span></a>
           </article>
         </div>
