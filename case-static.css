@@ -10,13 +10,10 @@ body.static-case{background:var(--paper)}
 .static-cover__role{padding-top:18px;border-top:1px solid #ffffff38;color:#d1d5dc;font:600 11px/1.6 Manrope;letter-spacing:.08em;text-transform:uppercase}
 .static-cover__media{overflow:hidden;border:1px solid #ffffff36;border-radius:18px;box-shadow:0 30px 70px #090d1866}
 .static-cover__media img{display:block;width:100%;aspect-ratio:1.65;object-fit:cover}
-.static-cover__media--type{display:flex;align-items:end;min-height:350px;padding:40px;background:radial-gradient(circle at 74% 25%,#4b6091,#273047 48%,#171b28)}
-.static-cover__media--type span{font:600 clamp(3.5rem,6vw,6rem)/1 Manrope;letter-spacing:-.075em}
-.static-cover__media--type small{display:block;margin-top:18px;color:#becdec;font:600 12px Manrope;letter-spacing:.14em}
 .static-case--alumni .static-cover{background:#5948aa}
 .static-case--eco .static-cover,.static-case--manejo .static-cover{background:#173b2a}
 .static-case--art .static-cover{background:#101716}
-.static-case--hive .static-cover,.static-case--fundecc .static-cover{background:#1d222c}
+.static-case--hive .static-cover{background:#1d222c}
 .case-story{max-width:1180px;margin:auto;padding:0 32px 100px}
 .case-story__intro{max-width:68ch;margin:0;padding:90px 0 60px;color:#383934;font-size:clamp(1.35rem,2vw,1.85rem);line-height:1.5}
 .story-block{display:grid;grid-template-columns:minmax(0,.83fr) minmax(0,1.17fr);gap:clamp(35px,7vw,100px);padding:62px 0;border-top:1px solid var(--line)}
@@ -60,7 +57,6 @@ body.static-case{background:var(--paper)}
   .static-footer{padding:32px 22px}
 }
 @media(max-width:600px){
-  .static-cover__media--type{min-height:250px;padding:24px}
   .case-shot{padding:10px;margin-bottom:28px;border-radius:14px}
   .case-image-pair,.case-facts{grid-template-columns:1fr}
   .story-block__content p{font-size:16px}

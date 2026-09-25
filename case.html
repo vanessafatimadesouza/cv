@@ -14,7 +14,7 @@
     <p>Os cases agora têm páginas próprias e permanentes.</p>
     <ul>
       <li><a href="cases/ima/">SIDAGRO / IMA</a></li>
-      <li><a href="cases/fundecc/">FUNDECC</a></li>
+      <li><a href="sobre/">Sobre Vanessa Souza</a></li>
       <li><a href="cases/alumni/">Alumni ESAL-UFLA</a></li>
       <li><a href="cases/art-screen/">Art Screen</a></li>
       <li><a href="cases/eco/">Eco</a></li>
@@ -24,7 +24,8 @@
   </main>
   <script>
     const slug = new URLSearchParams(location.search).get('project');
-    if (['ima', 'fundecc', 'alumni', 'art-screen', 'eco', 'manejo', 'hive-mind'].includes(slug)) {
+    if (slug === 'fundecc') location.replace('sobre/');
+    if (['ima', 'alumni', 'art-screen', 'eco', 'manejo', 'hive-mind'].includes(slug)) {
       location.replace(`cases/${slug}/`);
     }
   </script>

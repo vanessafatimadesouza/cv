@@ -26,27 +26,10 @@ const cases = {
       img('conexoes-sidagro.png', 'Visualização anonimizada de conexões entre fluxos do SIDAGRO', 'Visualização anonimizada de relações entre fluxos e telas.')
     ]
   },
-  fundecc: {
-    title: 'FUNDECC — sistemas e pesquisa',
-    description: 'Atuação de Vanessa Souza em Product Discovery, UX Research, Design Systems, acessibilidade e liderança em projetos da FUNDECC.',
-    tag: '02 / ATUAÇÃO PROFISSIONAL',
-    lead: 'Pesquisa, design e engenharia em sistemas do agronegócio.',
-    role: 'Product Discovery · UX Research · Liderança UX/UI',
-    cover: '',
-    theme: 'fundecc',
-    intro: 'Minha atuação na FUNDECC reúne projetos governamentais estaduais ligados ao agronegócio e avaliações especializadas em sistemas institucionais. O trabalho parte de necessidades e regras de negócio, atravessa a prototipação e segue até a validação e o acompanhamento da implementação.',
-    content: [
-      block('01 / PROJETOS', 'Problemas diferentes, método conectado.', `<div class="case-project-list"><article><h3>AgroDigital</h3><p>Projeto do conjunto de sistemas governamentais estaduais ligados ao agronegócio.</p></article><article><h3>SAF — Sistema de Apoio ao Fiscal</h3><p>Apoio a atividades fiscais e ao controle de processos de emergência zoossanitária.</p></article><article><h3>AFI — Assistente Fiscal Inteligente</h3><p>Assistente apresentado na área de emergências sanitárias do SAF.</p></article></div>`),
-      `<div class="case-image-pair">${img('fundecc-saf-emergencias.png', 'Tela do SAF com cartões de emergências sanitárias e acesso ao AFI', 'SAF: visão de emergências sanitárias.')}${img('fundecc-afi-inicio.png', 'Tela inicial do AFI com sugestões de perguntas', 'AFI: entrada do assistente fiscal.')}</div>`,
-      img('fundecc-afi-conversa.png', 'Tela de conversa do AFI com pergunta e resposta sobre uma emergência zoossanitária', 'AFI: exemplo de conversa na interface.'),
-      block('02 / ATUAÇÃO', 'Da descoberta à implementação.', `<p>Product Discovery, levantamento e refinamento de requisitos, UX Research, fluxos, prototipação de alta fidelidade, Design Systems, avaliações heurísticas, acessibilidade, validação com stakeholders, acompanhamento da implementação e liderança de UX/UI.</p><p>Também atuei em avaliação heurística e estrutural de sistemas institucionais e de projetos sobre reconhecimento e monitoramento de bovinos em cochos, incluindo a análise da relação entre comportamento alimentar e produção leiteira.</p>`),
-      block('03 / ESCALA', 'Experiência observável.', `<div class="case-facts"><div><strong>120+</strong><span>módulos projetados e evoluídos</span></div><div><strong>30+</strong><span>interações de pesquisa, descoberta e validação com usuários e clientes</span></div><div><strong>5</strong><span>profissionais de UX/UI sob minha liderança</span></div><div><strong>7</strong><span>projetos além do Figma, com protótipos funcionais ou desenvolvimento</span></div></div><p class="case-caveat">Fluxo de prototipação rápida associado a aproximadamente 2x mais telas produzidas por sprint.</p>`)
-    ]
-  },
   alumni: {
     title: 'Site Alumni ESAL-UFLA',
     description: 'Case do site Alumni ESAL-UFLA: arquitetura de informação, comunidade e comunicação de contribuições à universidade.',
-    tag: '06 / EDUCAÇÃO E COMUNIDADE',
+    tag: '05 / EDUCAÇÃO E COMUNIDADE',
     lead: 'Uma experiência digital para aproximar ex-alunos da universidade.',
     role: 'UX/UI Design · Arquitetura de informação',
     cover: 'alumni-cover-art.png',
@@ -63,7 +46,7 @@ const cases = {
   'art-screen': {
     title: 'Art Screen — Galeria Digital',
     description: 'Design e desenvolvimento front-end de uma galeria digital funcional integrada à Met Collection API.',
-    tag: '07 / DESIGN ENGINEERING',
+    tag: '06 / DESIGN ENGINEERING',
     lead: 'Da concepção à aplicação funcional para contemplar arte.',
     role: 'Concepção · UI · Front-end · Integração com API',
     cover: 'art-screen-cover-art.png',
@@ -79,7 +62,7 @@ const cases = {
   eco: {
     title: 'Eco — Créditos de Carbono',
     description: 'Case de Product Design para marketplace de créditos de carbono com simulação, relatórios e gestão.',
-    tag: '03 / PLATAFORMA',
+    tag: '02 / PLATAFORMA',
     lead: 'Transparência para conectar preservação e mercado.',
     role: 'Product Design · Web B2B',
     cover: 'eco-cover-art.png',
@@ -96,7 +79,7 @@ const cases = {
   manejo: {
     title: 'Manejo — Gestão de Rebanho',
     description: 'Case de Product Design e front-end de plataforma web para acompanhar animais, sanidade e rotina de fazendas.',
-    tag: '04 / PRODUTO FUNCIONAL',
+    tag: '03 / PRODUTO FUNCIONAL',
     lead: 'Dados e próximos cuidados em uma rotina rural mais clara.',
     role: 'Product Design · Front-end',
     cover: 'manejo-cover-art.png',
@@ -113,7 +96,7 @@ const cases = {
   'hive-mind': {
     title: 'Hive Mind — Gestão Pessoal',
     description: 'Case de sistema pessoal em Obsidian que conecta planejamento, projetos, conhecimento e cultura.',
-    tag: '05 / SISTEMA PESSOAL',
+    tag: '04 / SISTEMA PESSOAL',
     lead: 'Um lugar para conectar o que faço, aprendo e descubro.',
     role: 'Product Design · Obsidian · JavaScript',
     cover: 'hive-mind-cover-art.png',
@@ -131,10 +114,8 @@ const cases = {
 
 for (const [slug, item] of Object.entries(cases)) {
   const canonical = `${base}cases/${slug}/`;
-  const ogImage = `${base}${item.cover || 'vanessa-hero.jpg'}`;
-  const cover = item.cover
-    ? `<div class="static-cover__media"><img src="../../${item.cover}" alt="${item.coverAlt}"></div>`
-    : '<div class="static-cover__media static-cover__media--type" aria-hidden="true"><span>FUNDECC<small>AGRODIGITAL · SAF · AFI</small></span></div>';
+  const ogImage = `${base}${item.cover}`;
+  const cover = `<div class="static-cover__media"><img src="../../${item.cover}" alt="${item.coverAlt}"></div>`;
   const html = `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -160,7 +141,7 @@ for (const [slug, item] of Object.entries(cases)) {
     <header class="static-cover">
       <div class="static-cover__inner"><a class="static-cover__back" href="../../index.html#projetos">← Todos os projetos</a><div class="static-cover__grid"><div><span class="static-cover__tag">${item.tag}</span><h1>${item.title}</h1><p class="static-cover__lead">${item.lead}</p><p class="static-cover__role">${item.role}</p></div>${cover}</div></div>
     </header>
-    <div class="case-story"><p class="case-story__intro">${item.intro}</p>${item.content.join('\n')}${item.theme === 'fundecc' ? '' : '<div class="case-story__next"><a href="../fundecc/">Conhecer minha atuação na FUNDECC ↗</a></div>'}</div>
+    <div class="case-story"><p class="case-story__intro">${item.intro}</p>${item.content.join('\n')}<div class="case-story__next"><a href="../../sobre/">Conhecer minha atuação ↗</a></div></div>
   </main>
   <footer class="static-footer"><a href="../../index.html#projetos">← Todos os projetos</a><a href="../../index.html#contato">Vamos conversar ↗</a><span>© 2026 Vanessa Souza</span></footer>
 </body>
