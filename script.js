@@ -11,6 +11,8 @@ const projectPreviews = {
   alumni: { src: 'alumni-cover-art.png', alt: 'Arte editorial sobre a comunidade Alumni ESAL UFLA', label: 'ALUMNI', title: 'Alumni ESAL UFLA', description: 'Plataforma que aproxima ex-alunos e transforma conexão em impacto para a educação.', tags: ['UX/UI Design', 'Web Design', 'Comunidade'] },
   eco: { src: 'eco-cover-art.png', alt: 'Arte editorial sobre floresta, dados e créditos de carbono', label: 'ECO', title: 'Eco — Créditos de Carbono', description: 'Marketplace B2B que conecta preservação, empresas e impacto ambiental com transparência.', tags: ['Product Design', 'Web B2B', 'Marketplace'] },
   'art-screen': { src: 'art-screen-cover-art.png', alt: 'Composição editorial do Art Screen com a interface exibida em uma galeria digital', label: 'ART SCREEN', title: 'Art Screen — Galeria Digital', description: 'Experiência para transformar uma tela em galeria: a pessoa escolhe uma atmosfera e contempla obras Open Access do acervo do Met.', tags: ['Experience Design', 'Front-end', 'Met Collection API'] },
+  manejo: { src: 'manejo-cover-art.png', alt: 'Arte editorial do Manejo com rebanho Nelore em uma paisagem rural', label: 'MANEJO', title: 'Manejo — Gestão de Rebanho', description: 'Plataforma de gestão de rebanho que reúne saúde, reprodução, animais e rotina da fazenda em uma experiência clara.', tags: ['Product Design', 'React', 'Supabase'] },
+  'hive-mind': { src: 'hive-mind-cover-art.png', alt: 'Arte editorial do Hive Mind com esfera luminosa e conexões entre rotina, conhecimento e cultura', label: 'HIVE MIND', title: 'Hive Mind — Gestão Pessoal', description: 'Um sistema pessoal que conecta rotina, projetos, conhecimento e cultura em uma só experiência.', tags: ['Product Design', 'Obsidian', 'JavaScript'] },
 };
 Object.entries(projectPreviews).forEach(([project, preview]) => {
   const visual = document.querySelector(`[data-project="${project}"] .project-visual`);
@@ -30,7 +32,8 @@ Object.entries(projectPreviews).forEach(([project, preview]) => {
   card.querySelector('.project-info')?.remove();
   const heading = document.createElement('div');
   heading.className = 'project-card-heading';
-  heading.innerHTML = `<span>${project === 'ima' ? '01' : project === 'alumni' ? '02' : project === 'eco' ? '03' : '04'} / PROJETO</span><h3>${preview.title}</h3>`;
+  const projectNumbers = { ima: '01', alumni: '02', eco: '03', 'art-screen': '04', manejo: '05', 'hive-mind': '06' };
+  heading.innerHTML = `<span>${projectNumbers[project]} / PROJETO</span><h3>${preview.title}</h3>`;
   const footer = document.createElement('div');
   footer.className = 'project-card-footer';
   footer.innerHTML = `<p>${preview.description}</p><div>${preview.tags.map(tag => `<i>${tag}</i>`).join('')}</div>`;
@@ -68,7 +71,9 @@ const cases = {
   ima: { tag:'PRODUCT DESIGN · DESIGN SYSTEM', title:'IMA — Cadastro Agropecuário', text:'Sistema governamental para o Instituto Mineiro de Agropecuária. O trabalho organizou fluxos complexos e criou uma base visual consistente para dar velocidade ao produto e clareza aos usuários.', stats:['3.500+ conexões no Figma','800+ variáveis','45+ componentes'] },
   alumni: { tag:'UX/UI · COMMUNITY', title:'Alumni ESAL UFLA', text:'Uma experiência digital feita para aproximar gerações de ex-alunos e transformar conexão em impacto concreto para a educação.', stats:['R$ 2M+ arrecadados','Comunidade ativa','Experiência responsiva'] },
   eco: { tag:'PRODUCT DESIGN · WEB', title:'Eco — Créditos de Carbono', text:'Plataforma completa de comercialização de créditos de carbono com marketplace, métricas de impacto e transações transparentes.', stats:['8.5M+ t CO₂','Dashboard em tempo real','Marketplace certificado'] },
-  'art-screen': { tag: 'EXPERIENCE DESIGN · FRONT-END', title: 'Art Screen — Galeria Digital', text: 'Experiência minimalista que transforma uma tela em galeria, com obras Open Access do Metropolitan Museum of Art e controles pensados para contemplação.', stats: ['6 atmosferas', 'Obras em domínio público', 'HTML, CSS e JavaScript'] }
+  'art-screen': { tag: 'EXPERIENCE DESIGN · FRONT-END', title: 'Art Screen — Galeria Digital', text: 'Experiência minimalista que transforma uma tela em galeria, com obras Open Access do Metropolitan Museum of Art e controles pensados para contemplação.', stats: ['6 atmosferas', 'Obras em domínio público', 'HTML, CSS e JavaScript'] },
+  manejo: { tag: 'PRODUCT DESIGN · FRONT-END', title: 'Manejo — Gestão de Rebanho', text: 'Plataforma para organizar a rotina da fazenda, do cadastro de animais aos alertas de vacinação, partos e eventos.', stats: ['Gestão do rebanho', 'Rotina sanitária', 'Dados sincronizados'] },
+  'hive-mind': { tag: 'PRODUCT DESIGN · SISTEMA PESSOAL', title: 'Hive Mind — Gestão Pessoal', text: 'Sistema pessoal para conectar tarefas, calendário, projetos, conhecimento e biblioteca cultural.', stats: ['Rotina conectada', 'Biblioteca cultural', 'Espaços de conhecimento'] }
 };
 const modal = document.querySelector('.case-modal');
 document.querySelectorAll('.project-trigger').forEach(btn => btn.addEventListener('click', () => {

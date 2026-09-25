@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Pré-visualizações reais dos projetos, sem ilustrações genéricas. */
+    /* Artes de capa dos projetos; as telas reais aparecem nos cases. */
     .project-visual .project-preview{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}.visual-ima .project-preview{object-fit:contain}.project-visual:hover .project-preview{transform:scale(1.025)}.project-featured .project-visual{height:clamp(280px,34vw,440px);aspect-ratio:auto}.project-pair .project-visual{height:clamp(250px,25vw,340px);aspect-ratio:auto}.visual-ima{background:var(--ink)}.visual-alumni{background:var(--violet)}.visual-eco{background:#155642}.project-visual .case-preview-label{z-index:2;top:24px;left:28px;padding:0;border:0;border-radius:0;background:none!important;color:#fff;font:600 12px Manrope;letter-spacing:.09em;text-shadow:0 1px 10px rgba(0,0,0,.55)}.project-preview-action{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;justify-content:flex-end;padding:30px;color:#fff;background:linear-gradient(180deg,transparent 34%,rgba(10,14,12,.86));opacity:0;transition:opacity .3s ease}.project-preview-action:focus-visible{opacity:1;outline:3px solid var(--acid);outline-offset:-5px}.project-visual:hover .project-preview-action{opacity:1}.project-preview-action small{font:600 10px Manrope;letter-spacing:.14em}.project-preview-action strong{margin-top:9px;font:600 clamp(1.5rem,2.4vw,2.5rem)/1 Manrope;letter-spacing:-.05em}.project-preview-action span{max-width:490px;margin-top:10px;font-size:14px;line-height:1.45}.project-preview-action b{position:absolute;right:28px;bottom:28px;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--acid);color:var(--ink);font-size:22px}@media(max-width:800px){.project-preview-action{padding:22px;opacity:1;background:linear-gradient(180deg,transparent 45%,rgba(10,14,12,.78))}.project-preview-action span{display:none}.project-preview-action b{right:20px;bottom:18px;width:42px;height:42px}}
     .project-visual .case-preview-label{top:0;left:0;right:0;display:flex;align-items:center;min-height:82px;padding:18px 28px;background:var(--ink);color:#fff;font:700 clamp(1.3rem,2.2vw,2.2rem)/1 Manrope;letter-spacing:-.055em;text-shadow:none;border-radius:0}.project-preview-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.project-preview-tags i{padding:6px 9px;border:1px solid rgba(255,255,255,.55);border-radius:999px;font:600 10px Manrope;font-style:normal;letter-spacing:.04em}
     .project-card-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin:0 0 18px}.project-card-heading>span{font:600 11px Manrope;letter-spacing:.14em;color:var(--muted)}.project-card-heading h3{margin:0;font:600 clamp(1.4rem,2.25vw,2.25rem)/1 Manrope;letter-spacing:-.055em}.project-card-footer{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding:17px 0 0;border-top:1px solid var(--line)}.project-card-footer p{max-width:520px;margin:0;color:var(--muted);font-size:14px;line-height:1.5}.project-card-footer>div{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:7px}.project-card-footer i{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font:600 10px Manrope;font-style:normal;white-space:nowrap}.project-preview-action{background:transparent!important;opacity:1!important}.project-preview-action small,.project-preview-action strong,.project-preview-action span,.project-preview-action .project-preview-tags{display:none}.project-preview-action b{opacity:0;transform:translateY(8px);transition:.25s}.project-visual:hover .project-preview-action b,.project-preview-action:focus-visible b{opacity:1;transform:none}@media(max-width:800px){.project-card-heading{display:block;margin-bottom:13px}.project-card-heading h3{margin-top:8px}.project-card-footer{display:block}.project-card-footer>div{justify-content:flex-start;margin-top:14px}.project-preview-action b{opacity:1;transform:none}}
@@ -103,7 +103,8 @@
         </article>
       </div>
 
-      <article class="project project-featured project-eco reveal" data-project="eco">
+      <div class="project-pair">
+      <article class="project project-eco reveal" data-project="eco">
         <div class="project-visual visual-eco"><span class="case-preview-label">IMAGEM DO PROJETO · ECO</span><div class="eco-card"><span>eco</span><small>créditos de carbono</small><div class="eco-chart"><i></i><i></i><i></i><i></i></div><b>+8.5M t CO₂</b></div><div class="eco-ring"></div></div>
         <div class="project-info">
           <div><span class="project-number">03</span><span class="project-type">PRODUCT DESIGN · WEB</span></div>
@@ -111,6 +112,24 @@
           <p>Marketplace transparente para conectar quem preserva a empresas que desejam compensar.</p>
           <a class="text-link" href="case.html?project=eco">Ver case <span>↗</span></a>
         </div>
+      </article>
+
+      <article class="project reveal" data-project="manejo">
+        <div class="project-visual visual-manejo">
+          <img class="project-preview" src="manejo-cover-art.png" alt="Arte editorial do Manejo com rebanho Nelore em uma paisagem rural">
+        </div>
+        <div class="project-info">
+          <div><span class="project-number">05</span><span class="project-type">PRODUCT DESIGN · FRONT-END</span></div>
+          <h3>Manejo — Gestão de Rebanho</h3>
+          <p>Uma plataforma para acompanhar o rebanho, registrar manejos e transformar a rotina da fazenda em decisões mais claras.</p>
+          <a class="text-link" href="case.html?project=manejo">Ver case <span>↗</span></a>
+        </div>
+      </article>
+      </div>
+
+      <article class="project project-featured project-hive-mind reveal" data-project="hive-mind">
+        <div class="project-visual visual-hive-mind"><img class="project-preview" src="hive-mind-cover-art.png" alt="Arte editorial do Hive Mind com esfera luminosa e conexões entre rotina, conhecimento e cultura"></div>
+        <div class="project-info"><div><span class="project-number">06</span><span class="project-type">PRODUCT DESIGN · SISTEMA PESSOAL</span></div><h3>Hive Mind — Gestão Pessoal</h3><p>Um espaço conectado para organizar tarefas, calendário, projetos, conhecimento e cultura.</p><a class="text-link" href="case.html?project=hive-mind">Ver case <span>↗</span></a></div>
       </article>
     </section>
 
