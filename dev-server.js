@@ -17,7 +17,7 @@ const types = {
 http.createServer((req, res) => {
   const requestPath = decodeURIComponent(req.url.split('?')[0]);
   const relative = requestPath === '/' ? '/index.html' : requestPath;
-  const file = path.resolve(root, `.${relative}`);
+  const file = path.resolve(root, `.${relative}${relative.endsWith('/') ? 'index.html' : ''}`);
 
   if (!file.startsWith(root + path.sep) && file !== path.join(root, 'index.html')) {
     res.writeHead(403);
