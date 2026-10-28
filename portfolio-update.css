@@ -91,3 +91,4 @@
   .hero-bottom p{max-width:calc(100% - 144px)}
   .hero-bottom .round-link{flex:0 0 120px}
 }
+@media(min-width:1001px){.portfolio-grid--secondary{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.portfolio-grid--secondary .portfolio-card h4{font-size:clamp(1.4rem,1.7vw,1.8rem)}.portfolio-grid--secondary .portfolio-card__body>p:not(.portfolio-card__role){font-size:14px}}
