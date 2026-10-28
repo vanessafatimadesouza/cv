@@ -68,3 +68,187 @@ body.static-case{background:var(--paper)}
   .case-image-pair,.case-facts{grid-template-columns:1fr}
   .story-block__content p{font-size:16px}
 }
+
+/* Psiu: apresentação inspirada na linguagem visual do próprio produto. */
+.static-case--psiu .static-cover{background:#dcebcf;color:#263e50;overflow:hidden}
+.static-case--psiu .static-cover__back,.static-case--psiu .static-cover__lead,.static-case--psiu .static-cover__role{color:#425e68}
+.static-case--psiu .static-cover__tag{color:#426b38}
+.static-case--psiu .static-cover h1{font-size:clamp(5rem,10vw,10rem);letter-spacing:-.08em}
+.static-case--psiu .static-cover h1::after{content:".";color:#8ccf2e}
+.static-case--psiu .static-cover__lead{font-family:Manrope,sans-serif;font-weight:500;letter-spacing:-.04em;line-height:1.2}
+.static-case--psiu .static-cover__role{border-color:#9db397}
+.static-case--psiu .static-cover__media{padding:10px;background:#f8faf6;border:0;border-radius:14px;box-shadow:0 30px 70px #263e5027;transform:rotate(-2deg)}
+.static-case--psiu .static-cover__media img{aspect-ratio:auto;border-radius:7px}
+.static-case--psiu .case-story__intro{max-width:32ch;font:500 clamp(1.8rem,3vw,3rem)/1.2 Manrope,sans-serif;letter-spacing:-.045em;color:#263e50}
+.static-case--psiu .case-overview dt,.static-case--psiu .story-block .section-index,.static-case--psiu .psiu-mobile-showcase .section-index{color:#58822f}
+.static-case--psiu .story-block h2{color:#263e50}
+.static-case--psiu .case-shot{background:#e2ecdc;border:0;padding:clamp(12px,2vw,24px)}
+.static-case--psiu .case-shot img{box-shadow:0 14px 35px #263e5018}
+.psiu-screens{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.psiu-screens .case-shot{min-width:0}
+.psiu-mobile-showcase{display:grid;grid-template-columns:1fr minmax(220px,360px);gap:clamp(35px,7vw,100px);align-items:center;padding:clamp(30px,5vw,70px);margin:15px 0 65px;border-radius:22px;background:#263e50;color:#f5f8f1}
+.psiu-mobile-showcase h2{max-width:12ch;margin:24px 0;font:600 clamp(2.2rem,4vw,4rem)/1.02 Manrope;letter-spacing:-.06em}
+.psiu-mobile-showcase p{max-width:34ch;color:#d4dfd7;font-size:17px;line-height:1.6}
+.static-case--psiu .psiu-mobile-showcase .section-index{color:#b4e85b}
+.static-case--psiu .psiu-mobile-showcase .case-shot{margin:0;padding:10px;background:#f2f5ef}
+@media(max-width:800px){.psiu-screens,.psiu-mobile-showcase{grid-template-columns:1fr}.psiu-mobile-showcase .case-shot{width:min(100%,340px);justify-self:center}.static-case--psiu .static-cover__media{transform:none}.static-case--psiu .case-story__intro{font-size:1.7rem}}
+
+.psiu-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:45px 0 60px;border-radius:20px;overflow:hidden;background:#263e50;color:#f5f8f1}
+.psiu-principles article{min-width:0;padding:clamp(25px,3vw,42px);border-right:1px solid #ffffff30}
+.psiu-principles article:last-child{border:0}
+.psiu-principles span{color:#b4e85b;font:700 10px Manrope;letter-spacing:.12em}
+.psiu-principles h2{margin:34px 0 20px;font:600 clamp(1.8rem,2.6vw,2.8rem)/1.05 Manrope;letter-spacing:-.055em}
+.psiu-principles p{max-width:28ch;color:#d4dfd7;font-size:15px;line-height:1.6}
+.static-case--psiu .case-story>.case-shot{max-width:1000px;margin-inline:auto}
+@media(max-width:700px){.psiu-principles{grid-template-columns:1fr}.psiu-principles article{border-right:0;border-bottom:1px solid #ffffff30}.psiu-principles h2{margin-top:18px}}
+
+/* Capa editorial Psiu, com o produto como protagonista. */
+.static-case--psiu .static-cover{padding-top:125px;padding-bottom:0;background:#eff4eb}
+.static-case--psiu .static-cover__back{margin-bottom:35px}
+.static-case--psiu .static-cover__grid{grid-template-columns:1fr;gap:35px}
+.static-case--psiu .static-cover__grid>div:first-child{display:grid;grid-template-columns:1fr 1fr;align-items:end;column-gap:50px}
+.static-case--psiu .static-cover__tag{grid-column:1/-1;margin-bottom:14px}
+.static-case--psiu .static-cover h1{font-size:clamp(5rem,10vw,9rem);line-height:.9}
+.static-case--psiu .static-cover__lead{grid-column:2;grid-row:2;margin:0;max-width:18ch;font-size:clamp(1.6rem,2.6vw,2.6rem)}
+.static-case--psiu .static-cover__role{grid-column:1/-1;margin-top:24px}
+.static-case--psiu .static-cover__media{width:min(100%,1000px);margin:0 auto -1px;padding:12px 12px 0;border-radius:16px 16px 0 0;background:#d7e6d0;transform:none;box-shadow:none}
+.static-case--psiu .static-cover__media img{border-radius:8px 8px 0 0}
+.static-case--psiu .case-story__intro{padding-top:100px}
+@media(max-width:700px){.static-case--psiu .static-cover{padding-top:115px}.static-case--psiu .static-cover__grid>div:first-child{display:block}.static-case--psiu .static-cover__lead{margin-top:22px}.static-case--psiu .static-cover__role{margin-top:20px}.static-case--psiu .case-story__intro{padding-top:65px}}
+
+.psiu-cover{padding:145px max(5.1vw,32px) 72px;background:#263e50;color:#f3f6ef}
+.psiu-cover__inner{max-width:1380px;margin:auto}.psiu-cover__back{display:inline-block;margin-bottom:52px;color:#c7d4d3;font:600 15px Manrope}.psiu-cover__number{float:right;color:#b3c5c3;font:600 12px Manrope;letter-spacing:.16em}.psiu-cover__grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.12fr);align-items:center;gap:clamp(45px,7vw,120px)}
+.psiu-cover h1{margin:0;font:700 clamp(5rem,9vw,9.2rem)/.82 Manrope;letter-spacing:-.1em}.psiu-cover h1 span{color:#b5e94d}.psiu-cover__lead{max-width:530px;margin:58px 0 48px;color:#cfdbd6;font:400 clamp(1.45rem,2vw,2rem)/1.45 Georgia,serif}.psiu-cover__meta{display:flex;flex-wrap:wrap;gap:26px;padding-top:20px;border-top:1px solid #ffffff30}.psiu-cover__meta div{min-width:105px}.psiu-cover__meta span{display:block;margin-bottom:7px;color:#a8bbb8;font:600 10px Manrope;letter-spacing:.14em}.psiu-cover__meta b{font:600 14px/1.35 Manrope}.psiu-cover__media{padding:12px;background:#e5f0dd;border-radius:20px;box-shadow:0 32px 70px #101a2450;transform:rotate(-1.3deg)}.psiu-cover__media img{display:block;width:100%;height:auto;border-radius:9px}.psiu-marquee{overflow:hidden;padding:20px 0;background:#aee442;color:#263e50;white-space:nowrap;text-align:center;font:700 13px Manrope;letter-spacing:.14em}
+@media(max-width:800px){.psiu-cover{padding:120px 22px 50px}.psiu-cover__back{margin-bottom:30px}.psiu-cover__grid{grid-template-columns:1fr;gap:35px}.psiu-cover__number{font-size:10px}.psiu-cover__lead{margin:30px 0}.psiu-cover__media{transform:none}.psiu-marquee{text-align:left}}
+
+/* Capa com três telas mobile em composição. */
+.psiu-cover{background:#eff3eb;color:#20251e;overflow:hidden}
+.psiu-cover__back,.psiu-cover__number{color:#697565}
+.psiu-cover h1{color:#20251e}.psiu-cover h1 span{color:#8bc522}
+.psiu-cover__lead{color:#53614e}.psiu-cover__meta{border-color:#b9c8b3}.psiu-cover__meta span{color:#6a7a66}.psiu-cover__meta b{color:#283127}
+.psiu-cover__phones{position:relative;min-height:490px;display:flex;align-items:center;justify-content:center;isolation:isolate}
+.psiu-cover__phones:before{content:"";position:absolute;width:min(90%,470px);aspect-ratio:1;border:1px solid #b9d2a4;border-radius:50%;background:#e2eed8;z-index:-1}
+.psiu-phone{position:absolute;width:clamp(145px,15vw,215px);padding:7px;border:2px solid #252b24;border-radius:26px;background:#252b24;box-shadow:0 22px 45px #334b262b;overflow:hidden}
+.psiu-phone img{display:block;width:100%;height:auto;border-radius:18px}
+.psiu-phone--front{z-index:3;transform:translateY(24px)}.psiu-phone--back{z-index:1;transform:translate(-72%,-18px) rotate(-9deg)}.psiu-phone--side{z-index:2;transform:translate(72%,-6px) rotate(9deg)}
+.psiu-principles{background:#e4f0d9;color:#20251e}.psiu-principles article{border-color:#bdcfb2}.psiu-principles span{color:#527c31}.psiu-principles p{color:#53614e}
+.psiu-mobile-showcase{background:#e3eddc;color:#20251e}.psiu-mobile-showcase p{color:#53614e}.static-case--psiu .psiu-mobile-showcase .section-index{color:#527c31}
+@media(max-width:800px){.psiu-cover__phones{min-height:380px}.psiu-phone{width:clamp(125px,25vw,180px)}.psiu-phone--back{transform:translate(-66%,-12px) rotate(-8deg)}.psiu-phone--side{transform:translate(66%,-6px) rotate(8deg)}}
+
+/* Abertura editorial como os demais cases; dispositivos no corpo do projeto. */
+.psiu-cover{background:#171714;color:#f3f0e8}
+.psiu-cover__back,.psiu-cover__number{color:#aaa9a2}
+.psiu-cover h1{color:#f3f0e8}.psiu-cover h1 span{color:#d7ff54}
+.psiu-cover__lead{color:#c0beb4}.psiu-cover__meta{border-color:#ffffff30}.psiu-cover__meta span{color:#92928a}.psiu-cover__meta b{color:#f3f0e8}
+.psiu-cover__media{padding:0;border-radius:12px;overflow:hidden;background:transparent;transform:rotate(-1.3deg);box-shadow:0 30px 70px #0005}
+.psiu-cover__media img{width:100%;height:auto;border-radius:0}
+.psiu-mobile-showcase{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);overflow:hidden}
+.psiu-mobile-showcase .psiu-cover__phones{min-height:470px}
+@media(max-width:800px){.psiu-mobile-showcase{grid-template-columns:1fr}.psiu-cover__media{transform:none}.psiu-mobile-showcase .psiu-cover__phones{min-height:360px}}
+
+/* Telas lado a lado, ampliadas sob interação. */
+.psiu-mobile-showcase{display:block;padding:clamp(30px,5vw,70px)}
+.psiu-mobile-copy{max-width:700px}.psiu-mobile-copy h2{max-width:18ch}.psiu-mobile-copy p{max-width:50ch}
+.psiu-mobile-showcase .psiu-cover__phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(14px,2.5vw,35px);min-height:0;margin-top:55px}
+.psiu-mobile-showcase .psiu-cover__phones:before{display:none}
+.psiu-mobile-showcase .psiu-phone{position:relative;inset:auto;width:100%;max-width:260px;justify-self:center;padding:7px;border:0;border-radius:28px;background:#242a24;transform:none;transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 14px 30px #334b2625}
+.psiu-mobile-showcase .psiu-phone img{border-radius:21px}
+.psiu-mobile-showcase .psiu-phone:hover,.psiu-mobile-showcase .psiu-phone:focus-visible{z-index:4;transform:scale(1.08);box-shadow:0 24px 48px #334b2640;outline:2px solid #6e9f42;outline-offset:4px}
+@media(max-width:700px){.psiu-mobile-showcase .psiu-cover__phones{gap:12px;margin-top:35px}.psiu-mobile-showcase .psiu-phone{padding:4px;border-radius:16px}.psiu-mobile-showcase .psiu-phone img{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){.psiu-mobile-showcase .psiu-phone{transition:none}}
+
+/* Moldura de smartphone com tela recortada e detalhes físicos discretos. */
+.psiu-mobile-showcase .psiu-phone{aspect-ratio:9/19.5;max-width:240px;padding:7px;border:2px solid #555b56;border-radius:35px;background:#151916;box-shadow:0 0 0 2px #111,0 20px 35px #23341c35;overflow:hidden}
+.psiu-mobile-showcase .psiu-phone::before{content:"";position:absolute;z-index:2;top:10px;left:50%;width:29%;height:14px;transform:translateX(-50%);border-radius:999px;background:#151916}
+.psiu-mobile-showcase .psiu-phone img{width:100%;height:100%;border-radius:26px;object-fit:cover;object-position:top}
+@media(max-width:700px){.psiu-mobile-showcase .psiu-phone{padding:4px;border-width:1px;border-radius:20px}.psiu-mobile-showcase .psiu-phone::before{top:6px;height:7px}.psiu-mobile-showcase .psiu-phone img{border-radius:15px}}
+
+/* Exibe a captura completa dentro da tela, sem cortar as laterais. */
+.psiu-mobile-showcase .psiu-phone{aspect-ratio:auto}
+.psiu-mobile-showcase .psiu-phone img{width:100%;height:auto;object-fit:contain}
+
+/* A captura permanece inteira em uma tela de proporção vertical. */
+.psiu-mobile-showcase .psiu-phone{aspect-ratio:9/19.5;display:flex;align-items:flex-start;background:#f4f6f2;border:7px solid #242a24;padding:0;overflow:hidden}
+.psiu-mobile-showcase .psiu-phone img{width:100%;height:auto;object-fit:contain;border-radius:0;margin-top:25px}
+.psiu-mobile-showcase .psiu-phone::before{top:7px;height:12px}
+@media(max-width:700px){.psiu-mobile-showcase .psiu-phone{border-width:4px}.psiu-mobile-showcase .psiu-phone img{margin-top:15px}.psiu-mobile-showcase .psiu-phone::before{top:4px;height:7px}}
+
+/* A composição gerada reúne as três telas; cada moldura mostra uma delas. */
+.psiu-mobile-showcase .psiu-phone img{position:absolute;top:0;width:300%;max-width:none;height:100%;margin:0;object-fit:fill}
+.psiu-mobile-showcase .psiu-phone--back img{left:0}.psiu-mobile-showcase .psiu-phone--front img{left:-100%}.psiu-mobile-showcase .psiu-phone--side img{left:-200%}
+.psiu-mobile-showcase .psiu-phone{aspect-ratio:592/887}
+.psiu-mobile-showcase .psiu-phone img{height:auto;min-height:100%;object-fit:initial}
+.psiu-laptop-visual{margin:0 0 65px}.psiu-laptop-visual img{display:block;width:100%;height:auto;border-radius:20px}.psiu-laptop-visual figcaption{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:16px;color:#62675d;font-size:13px}.psiu-laptop-visual figcaption a{text-decoration:underline;text-underline-offset:3px}
+
+/* Paleta do portfólio aplicada ao case Psiu. */
+.psiu-principles{background:#171714;color:#f3f0e8}.psiu-principles article{border-color:#ffffff30}.psiu-principles span{color:#d7ff54}.psiu-principles p{color:#c5c4bc}
+.psiu-mobile-showcase{background:#171714;color:#f3f0e8}.psiu-mobile-showcase p{color:#c5c4bc}.static-case--psiu .psiu-mobile-showcase .section-index{color:#d7ff54}
+.psiu-marquee{background:#6555e8;color:#fff}
+.static-case--psiu .case-shot{background:#e8e5f2}
+.static-case--psiu .case-overview dt,.static-case--psiu .story-block .section-index{color:#6555e8}
+.psiu-laptop-visual img{background:#171714}
+.psiu-mobile-image{margin-top:48px;overflow:hidden;border-radius:18px}.psiu-mobile-image img{display:block;width:100%;height:auto}
+.psiu-radar{margin:40px calc(50% - 50vw) 65px;padding:clamp(65px,8vw,110px) max(32px,calc((100vw - 1180px)/2));background:#171714;color:#f3f0e8;overflow:hidden}
+.psiu-radar__intro{display:grid;grid-template-columns:1fr .65fr;gap:22px 65px;align-items:end}.psiu-radar__intro>span{grid-column:1/-1;color:#d7ff54;font:700 11px Manrope;letter-spacing:.14em}.psiu-radar h2{margin:0;font:600 clamp(2.5rem,4.5vw,4.8rem)/1.03 Manrope;letter-spacing:-.06em}.psiu-radar h2 em{color:#d7ff54;font:400 italic 1em Georgia,serif}.psiu-radar__intro p{max-width:40ch;margin:0;color:#c5c4bc;font-size:17px;line-height:1.65}.psiu-radar__screen{max-width:1080px;margin:65px auto 0}.psiu-radar__screen img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 24px 70px #0007}.psiu-radar__screen figcaption{margin-top:15px;color:#aaa9a2;font-size:13px}
+@media(max-width:700px){.psiu-radar{padding:65px 22px}.psiu-radar__intro{grid-template-columns:1fr;gap:20px}.psiu-radar__intro>span{grid-column:auto}.psiu-radar__screen{margin-top:38px}}
+.psiu-mobile-devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,28px);margin-top:50px}.psiu-device{aspect-ratio:512/1024;background-image:url('psiu-celulares-transparentes.png');background-size:300% 100%;background-repeat:no-repeat;transition:transform .25s ease;filter:drop-shadow(0 16px 20px #0005)}.psiu-device--one{background-position:0 0}.psiu-device--two{background-position:50% 0}.psiu-device--three{background-position:100% 0}.psiu-device:hover,.psiu-device:focus-visible{transform:scale(1.06);outline:2px solid #d7ff54;outline-offset:4px}@media(prefers-reduced-motion:reduce){.psiu-device{transition:none}}
+.static-case--psiu .nav-shell{position:absolute;top:0;left:0;transform:none;width:100%;height:88px;padding:0 32px;border:0;border-bottom:1px solid #ffffff21;border-radius:0;background:transparent;box-shadow:none;color:#f3f0e8;backdrop-filter:none}.static-case--psiu .nav-shell .logo span{color:#d7ff54}.static-case--psiu .nav-cta{background:#d7ff54;color:#171714;border-radius:999px}
+@media(max-width:700px){.static-case--psiu .nav-shell{height:64px;padding:0 18px}.psiu-mobile-devices{gap:6px;margin-top:30px}}
+.psiu-device:hover{outline:none}.psiu-device:focus-visible{outline:2px solid #d7ff54;outline-offset:4px}
+.psiu-device--one{background-image:url('psiu-primeiro-transparente.png');background-size:contain;background-position:center}
+.static-case--psiu .case-story__intro{max-width:28ch;color:#171714;font-size:clamp(2rem,3.2vw,3.3rem);line-height:1.15;padding:100px 0 55px}
+.static-case--psiu .case-overview{gap:32px;margin-bottom:65px}.static-case--psiu .case-overview>div{padding-top:20px}.static-case--psiu .case-overview dd{font-size:16px;line-height:1.6;color:#55554e}
+.psiu-principles{margin-top:0}.psiu-principles article{display:flex;flex-direction:column;min-height:270px}.psiu-principles h2{margin:48px 0 20px}.psiu-principles p{margin:0;max-width:30ch}
+@media(max-width:700px){.static-case--psiu .case-story__intro{padding:65px 0 40px}.static-case--psiu .case-overview{gap:0;margin-bottom:45px}.psiu-principles article{min-height:0}.psiu-principles h2{margin-top:22px}}
+
+/* Introdução editorial com ritmo e alinhamento entre os três blocos. */
+.static-case--psiu .case-story__intro{max-width:23ch;padding:100px 0 72px;font-size:clamp(2.15rem,4.2vw,4.3rem);line-height:1.08;letter-spacing:-.065em}
+.static-case--psiu .case-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin:0 0 76px;border-top:1px solid #c6c3bb;border-bottom:1px solid #c6c3bb}
+.static-case--psiu .case-overview>div{padding:26px 28px 30px;border:0;border-left:1px solid #d2cfc7}
+.static-case--psiu .case-overview>div:first-child{padding-left:0;border-left:0}
+.static-case--psiu .case-overview dt{margin-bottom:16px}
+.static-case--psiu .case-overview dd{max-width:28ch}
+.psiu-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:0;margin:0 0 70px;background:#171714}
+.psiu-principles article{min-height:290px;padding:38px 35px;justify-content:space-between}
+.psiu-principles h2{margin:34px 0 20px;font-size:clamp(1.8rem,2.6vw,2.7rem)}
+.psiu-principles p{margin-top:auto}
+@media(max-width:700px){.static-case--psiu .case-story__intro{padding:65px 0 45px;font-size:clamp(2rem,8vw,3rem)}.static-case--psiu .case-overview{grid-template-columns:1fr;margin-bottom:48px}.static-case--psiu .case-overview>div,.static-case--psiu .case-overview>div:first-child{padding:20px 0;border-left:0;border-top:1px solid #d2cfc7}.static-case--psiu .case-overview>div:first-child{border-top:0}.psiu-principles{grid-template-columns:1fr}.psiu-principles article{min-height:0;padding:28px}.psiu-principles h2{margin:24px 0 16px}}
+
+/* Abertura do case em uma composição mais leve e contínua. */
+.static-case--psiu .case-story__intro{max-width:22ch;padding:90px 0 48px;font-size:clamp(2.2rem,3.8vw,4rem)}
+.static-case--psiu .case-overview{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;border:0;margin:0 0 95px}
+.static-case--psiu .case-overview>div,.static-case--psiu .case-overview>div:first-child{border:0;border-top:1px solid #b9b6ae;padding:20px 0 0}
+.static-case--psiu .case-overview dt{color:#6555e8}
+.psiu-principles{background:transparent;color:#171714;gap:32px;border-top:1px solid #b9b6ae;margin-bottom:80px}
+.psiu-principles article,.psiu-principles article:last-child{padding:24px 0 32px;min-height:235px;border:0}
+.psiu-principles span{color:#6555e8}
+.psiu-principles h2{margin:30px 0 18px;font-size:clamp(1.8rem,2.5vw,2.6rem)}
+.psiu-principles p{color:#62615b}
+@media(max-width:700px){.static-case--psiu .case-story__intro{padding:65px 0 40px}.static-case--psiu .case-overview{grid-template-columns:1fr;gap:0;margin-bottom:55px}.static-case--psiu .case-overview>div,.static-case--psiu .case-overview>div:first-child{padding:18px 0}.psiu-principles{grid-template-columns:1fr;gap:0}.psiu-principles article,.psiu-principles article:last-child{min-height:0;padding:24px 0;border-bottom:1px solid #d2cfc7}.psiu-principles h2{margin:18px 0 12px}}
+.psiu-intro{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(45px,8vw,120px);padding:clamp(80px,10vw,140px) 0}
+.psiu-intro__label{color:#6555e8;font:700 11px Manrope;letter-spacing:.14em}
+.psiu-intro h2{max-width:11ch;margin:25px 0 0;font:600 clamp(2.8rem,4.8vw,5rem)/1.02 Manrope;letter-spacing:-.065em}
+.psiu-intro h2 em{color:#6555e8;font-family:Georgia,serif;font-weight:400}
+.psiu-intro__content>p{max-width:48ch;margin:0 0 44px;color:#454640;font-size:clamp(18px,1.6vw,21px);line-height:1.65}
+.static-case--psiu .psiu-intro .case-overview{display:block;margin:0;border:0}
+.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{display:grid;grid-template-columns:130px 1fr;gap:20px;padding:19px 0;border:0;border-top:1px solid #cbc8c0}
+.static-case--psiu .psiu-intro .case-overview dt{margin:3px 0 0}.static-case--psiu .psiu-intro .case-overview dd{max-width:40ch}
+@media(max-width:700px){.psiu-intro{grid-template-columns:1fr;gap:30px;padding:70px 0}.psiu-intro__content>p{margin-bottom:28px}.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{grid-template-columns:1fr;gap:8px}}
+.psiu-intro{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(55px,8vw,115px);align-items:start;padding:clamp(85px,8vw,120px) 0}
+.psiu-intro h2{max-width:12ch;font-size:clamp(2.8rem,4vw,4.4rem);line-height:1.04}
+.psiu-intro__content{padding-top:34px}.psiu-intro__content>p{max-width:40ch;margin-bottom:38px;font-size:clamp(18px,1.4vw,20px);line-height:1.65}
+.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{grid-template-columns:110px minmax(0,1fr);gap:28px;padding:21px 0}
+.static-case--psiu .psiu-intro .case-overview dd{font-size:15px;line-height:1.6}
+@media(max-width:700px){.psiu-intro{grid-template-columns:1fr;gap:22px;padding:70px 0}.psiu-intro__content{padding-top:0}.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{grid-template-columns:1fr;gap:8px}}
+
+.psiu-intro{position:relative;isolation:isolate;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(60px,9vw,130px);padding:clamp(95px,10vw,145px) 0;overflow:hidden}
+.psiu-intro>div:first-child{position:relative;padding-top:24px;border-top:1px solid #bcb9b1}
+.psiu-intro>div:first-child:before{content:"";position:absolute;top:-2px;left:0;width:58px;height:3px;background:#6555e8}
+.psiu-intro h2{position:relative;z-index:1;margin-top:42px;max-width:10ch;font-size:clamp(3.2rem,5vw,5.2rem);line-height:.98}
+.psiu-intro h2 em{display:block;margin-top:8px}
+.psiu-intro__content{padding-top:25px;border-top:1px solid #bcb9b1}
+.psiu-intro__content>p{font-size:clamp(19px,1.6vw,22px);color:#34342f;line-height:1.55;margin-bottom:48px}
+.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{grid-template-columns:100px minmax(0,1fr);gap:24px;padding:20px 0}
+.psiu-intro:after{content:"";position:absolute;z-index:-1;left:-80px;bottom:5px;width:280px;height:280px;border:1px solid #6555e825;border-radius:50%;box-shadow:0 0 0 36px #6555e809,0 0 0 72px #6555e806}
+@media(max-width:700px){.psiu-intro{grid-template-columns:1fr;gap:38px;padding:70px 0}.psiu-intro h2{font-size:clamp(3rem,12vw,4.5rem);margin-top:30px}.psiu-intro__content{padding-top:22px}.psiu-intro__content>p{margin-bottom:30px}.static-case--psiu .psiu-intro .case-overview>div,.static-case--psiu .psiu-intro .case-overview>div:first-child{grid-template-columns:1fr;gap:8px}.psiu-intro:after{width:170px;height:170px}}
+.psiu-intro:after{display:none}

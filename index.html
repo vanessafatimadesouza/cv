@@ -37,7 +37,7 @@
   <header class="nav-shell">
     <a class="logo" href="#inicio" aria-label="Voltar ao início">VS<span>°</span></a>
     <nav aria-label="Navegação principal">
-      <a href="sobre/">Sobre</a>
+      <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a href="#pesquisas">Pesquisas</a>
       <a href="#contato">Contato</a>
@@ -58,14 +58,32 @@
       </div>
       <div class="hero-bottom reveal">
         <p>Sou <strong>Vanessa Souza</strong>. Uno pesquisa, design e front-end para tornar sistemas complexos mais claros e acessíveis.</p>
-        <a href="#projetos" class="round-link magnetic" aria-label="Ver projetos"><span>Ver projetos</span><b>↓</b></a>
+        <a href="#sobre" class="round-link magnetic" aria-label="Conheça mais sobre mim"><span>Sobre mim</span><b>↓</b></a>
       </div>
       <div class="scroll-note" aria-hidden="true">SCROLL PARA EXPLORAR <i></i></div>
     </section>
 
+    <section class="about section" id="sobre">
+      <div class="section-index reveal">01 / SOBRE</div>
+      <div class="about-main reveal">
+        <div class="about-copy">
+          <h2>Da regra de negócio à interface, <span>clareza exige visão de sistema.</span></h2>
+        </div>
+        <div class="skills" aria-label="Especialidades">
+          <span>Product Discovery</span><span>UX Research</span><span>Design Systems</span><span>Acessibilidade</span><span>Front-end</span><span>Requisitos</span>
+        </div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-intro">
+          <p>Investigo o contexto de uso, traduzo regras de negócio em fluxos e acompanho a implementação de produtos digitais.</p>
+        </div>
+        <a class="about-deep-link" href="sobre/"><span>Mais sobre mim</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
     <section class="projects section" id="projetos" aria-labelledby="projects-title">
       <div class="projects-head reveal">
-        <div><div class="section-index">01 / PROJETOS</div><h2 id="projects-title">Produto, pesquisa<br>e engenharia em prática.</h2></div>
+        <div><div class="section-index">02 / PROJETOS</div><h2 id="projects-title">Produto, pesquisa<br>e engenharia em prática.</h2></div>
         <p>Projetos profissionais e autorais, organizados pelo contexto e pelo papel que desempenhei.</p>
       </div>
       <h3 class="project-group-title">Cases principais <span>01 — 04</span></h3>
@@ -80,8 +98,9 @@
         <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/manejo/" aria-label="Ver case Manejo"><img src="manejo-cover-art-1400.webp" srcset="manejo-cover-art-700.webp 700w, manejo-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Rebanho em paisagem rural na composição visual do Manejo" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">03 / PRODUTO FUNCIONAL</span><h4>Manejo — Gestão de Rebanho</h4><p class="portfolio-card__role">Product Design · Front-end</p><p>Rotina sanitária, reprodução e histórico do rebanho em uma plataforma web.</p><p class="portfolio-card__evidence">Interface funcional em React e Supabase.</p><a href="cases/manejo/">Explorar case Manejo ↗</a></div></article>
         <article class="portfolio-card reveal"><a class="portfolio-card__image" href="cases/hive-mind/" aria-label="Ver case Hive Mind"><img src="hive-mind-cover-art-1400.webp" srcset="hive-mind-cover-art-700.webp 700w, hive-mind-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Esfera luminosa do sistema pessoal Hive Mind" loading="lazy"></a><div class="portfolio-card__body"><span class="portfolio-card__number">04 / SISTEMA PESSOAL</span><h4>Hive Mind</h4><p class="portfolio-card__role">Product Design · Obsidian · JavaScript</p><p>Espaço pessoal que conecta planejamento, tarefas, projetos, conhecimento e cultura.</p><a href="cases/hive-mind/">Explorar case Hive Mind ↗</a></div></article>
       </div>
-      <h3 class="project-group-title project-group-title--secondary">Outros projetos <span>05 — 06</span></h3>
+      <h3 class="project-group-title project-group-title--secondary">Outros projetos <span>05 — 07</span></h3>
       <div class="portfolio-grid portfolio-grid--secondary">
+
         <article class="portfolio-card reveal">
           <a class="portfolio-card__image" href="cases/alumni/" aria-label="Ver case Alumni ESAL-UFLA"><img src="alumni-cover-art-1400.webp" srcset="alumni-cover-art-700.webp 700w, alumni-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Composição visual do site Alumni ESAL-UFLA" loading="lazy"></a>
           <div class="portfolio-card__body"><span class="portfolio-card__number">05 / EDUCAÇÃO E COMUNIDADE</span><h4>Site Alumni ESAL-UFLA</h4><p class="portfolio-card__role">UX/UI Design · Arquitetura de informação</p><p>Site institucional que organiza histórias, cursos e caminhos de contribuição para ex-alunos.</p><p class="portfolio-card__evidence">Contexto da associação: mais de R$ 2M mobilizados.</p><a href="cases/alumni/">Explorar case Alumni ↗</a></div>
@@ -90,24 +109,10 @@
           <a class="portfolio-card__image" href="cases/art-screen/" aria-label="Ver case Art Screen"><img src="art-screen-cover-art-1400.webp" srcset="art-screen-cover-art-700.webp 700w, art-screen-cover-art-1400.webp 1400w" sizes="(max-width: 650px) 100vw, (max-width: 1000px) 50vw, 60vw" width="1672" height="941" alt="Interface da galeria digital Art Screen" loading="lazy"></a>
           <div class="portfolio-card__body"><span class="portfolio-card__number">06 / DESIGN ENGINEERING</span><h4>Art Screen</h4><p class="portfolio-card__role">Concepção · UI · Front-end · API</p><p>Galeria digital funcional para contemplar obras Open Access do Metropolitan Museum of Art.</p><p class="portfolio-card__evidence">Aplicação publicada · integração com a Met Collection API</p><a href="cases/art-screen/">Explorar case Art Screen ↗</a></div>
         </article>
-      </div>
-    </section>
-
-    <section class="about section" id="sobre">
-      <div class="section-index reveal">02 / SOBRE</div>
-      <div class="about-main reveal">
-        <div class="about-copy">
-          <h2>Da regra de negócio à interface, <span>clareza exige visão de sistema.</span></h2>
-        </div>
-        <div class="skills" aria-label="Especialidades">
-          <span>Product Discovery</span><span>UX Research</span><span>Design Systems</span><span>Acessibilidade</span><span>Front-end</span><span>Requisitos</span>
-        </div>
-      </div>
-      <div class="about-grid reveal">
-        <div class="about-intro">
-          <p>Investigo o contexto de uso, traduzo regras de negócio em fluxos e acompanho a implementação de produtos digitais.</p>
-        </div>
-        <a class="about-deep-link" href="sobre/"><span>Conheça minha atuação</span><span aria-hidden="true">↗</span></a>
+        <article class="portfolio-card reveal">
+          <a class="portfolio-card__image" href="cases/psiu/" aria-label="Ver case Psiu"><img src="psiu-inicio.png" alt="Tela inicial do Psiu com radar de prioridades" loading="lazy"></a>
+          <div class="portfolio-card__body"><span class="portfolio-card__number">07 / PRODUTO AUTORAL</span><h4>Psiu</h4><p class="portfolio-card__role">Product Design · Front-end</p><p>Protótipo que reúne conversas e pendências para ajudar a identificar o que precisa de atenção.</p><p class="portfolio-card__evidence">Protótipo local · dados de exemplo</p><a href="cases/psiu/">Explorar case Psiu ↗</a></div>
+        </article>
       </div>
     </section>
 
@@ -118,10 +123,11 @@
         <p>Eye tracking, SUS, avaliação heurística, acessibilidade e requisitos orientam decisões de design com evidências.</p>
       </div>
       <div class="research-grid">
-        <article class="research-card research-card--feature reveal"><span>01 / INTERAÇÃO</span><h3>Eye tracking e SUS</h3><p>Pesquisa em Interação Humano-Computador com rastreamento ocular e avaliação de usabilidade em sistemas de informação.</p><div class="research-card__links"><a href="tcc-rastreamento-ocular-ima.pdf" target="_blank" rel="noreferrer">Ler trabalho de eye tracking <b>↗</b></a></div></article>
-        <article class="research-card reveal"><span>02 / USABILIDADE</span><h3>Avaliação heurística em ciclos ágeis</h3><p>Em duas avaliações do SIDAGRO, uma no sistema legado e outra na versão redesenhada, o estudo identificou 43% menos problemas de usabilidade no total.</p><a href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_12" target="_blank" rel="noreferrer">Ler publicação sobre avaliação heurística <b>↗</b></a></article>
-        <article class="research-card reveal"><span>03 / ACESSIBILIDADE</span><h3>LLMs e inspeção de acessibilidade</h3><p>Pesquisa sobre modelos de linguagem aplicados à inspeção de acessibilidade em sistemas digitais.</p><a href="artigo-llm-acessibilidade-web.pdf" target="_blank" rel="noopener noreferrer">Ler artigo sobre acessibilidade <b>↗</b></a></article>
-        <article class="research-card research-card--dark reveal"><span>04 / ENGENHARIA DE REQUISITOS</span><h3>Requisitos para produtos mais adequados</h3><p>A pesquisa explora como compreender, organizar e comunicar requisitos para apoiar decisões de produto e construir soluções alinhadas às necessidades das pessoas.</p><a href="https://sol.sbc.org.br/index.php/washes/article/view/43005" target="_blank" rel="noreferrer">Ver publicação <b>↗</b></a></article>
+        <article class="research-card research-card--feature reveal"><span>01 / INTERAÇÃO</span><h3>Eye tracking e SUS</h3><p>Pesquisa em Interação Humano-Computador com rastreamento ocular e avaliação de usabilidade em sistemas de informação.</p><details class="research-findings"><summary>Ver principais achados <span aria-hidden="true">+</span></summary><div class="research-findings__body"><p><strong>10 participantes, duas perspectivas de usabilidade.</strong> Em um caso, a avaliação subjetiva foi 97,2 no SUS, enquanto o índice baseado no olhar foi 74,0. O estudo exploratório mostrou que satisfação e comportamento visual podem revelar dificuldades diferentes.</p><div class="research-card__links"><a href="tcc-rastreamento-ocular-ima.pdf" target="_blank" rel="noreferrer">Ler trabalho de eye tracking <b>↗</b></a></div></div></details></article>
+        <article class="research-card reveal"><span>02 / USABILIDADE</span><h3>Avaliação heurística em ciclos ágeis</h3><p>Em duas avaliações do SIDAGRO, uma no sistema legado e outra na versão redesenhada, o estudo identificou 43% menos problemas de usabilidade no total.</p><details class="research-findings"><summary>Ver principais achados <span aria-hidden="true">+</span></summary><div class="research-findings__body"><p><strong>43% menos problemas de usabilidade</strong> na comparação entre duas avaliações heurísticas: uma no SIDAGRO legado e outra na versão redesenhada. Problemas graves e críticos diminuíram, mas desafios de visibilidade do estado e reconhecimento de funções persistiram.</p><a href="https://link.springer.com/chapter/10.1007/978-3-032-05008-3_12" target="_blank" rel="noreferrer">Ler publicação sobre avaliação heurística <b>↗</b></a></div></details></article>
+        <article class="research-card reveal"><span>03 / ACESSIBILIDADE</span><h3>LLMs e inspeção de acessibilidade</h3><p>Pesquisa sobre modelos de linguagem aplicados à inspeção de acessibilidade em sistemas digitais.</p><details class="research-findings"><summary>Ver principais achados <span aria-hidden="true">+</span></summary><div class="research-findings__body"><p><strong>16 de 146 itens avaliados no primeiro teste: cerca de 11% de cobertura.</strong> Em um teste posterior com outro modelo e cinco telas, a inspeção estruturada eliminou omissões, mas permaneceu divergente da avaliação humana. A comparação não isola o efeito do prompt.</p><a href="artigo-llm-acessibilidade-web.pdf" target="_blank" rel="noopener noreferrer">Ler artigo sobre acessibilidade <b>↗</b></a></div></details></article>
+        <article class="research-card research-card--dark reveal"><span>04 / ENGENHARIA DE REQUISITOS</span><h3>Requisitos para produtos mais adequados</h3><p>A pesquisa explora como compreender, organizar e comunicar requisitos para apoiar decisões de produto e construir soluções alinhadas às necessidades das pessoas.</p><details class="research-findings"><summary>Ver principais achados <span aria-hidden="true">+</span></summary><div class="research-findings__body"><p><strong>Requisitos ajudam a orientar a modernização de sistemas legados.</strong> O relato de experiência apresenta como necessidades e regras de negócio foram levantadas e comunicadas no contexto do setor público.</p><a href="https://sol.sbc.org.br/index.php/washes/article/view/43005" target="_blank" rel="noreferrer">Ver publicação <b>↗</b></a></div></details></article>
+        <article class="research-card research-card--ai"><span>05 / IA E DESIGN</span><h3>Skills de UI/UX e interfaces geradas por IA</h3><p>Experimento compara orientações de design em prompts e em uma skill para agentes de programação.</p><details class="research-findings"><summary>Ver principais achados <span aria-hidden="true">+</span></summary><div class="research-findings__body"><p><strong>24 aplicações, três estratégias.</strong> Na média, as violações confirmadas de contraste foram 98% menores com instruções no prompt e 74% menores com a skill, em relação à condição sem orientações de UI/UX. A skill teve melhor resultado no posicionamento do foco na verificação móvel, mas não mostrou vantagem geral em todas as medidas.</p></div></details></article>
       </div>
     </section>
 

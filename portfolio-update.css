@@ -84,3 +84,10 @@
   .portfolio-card--feature .portfolio-card__image{aspect-ratio:1.55}
   .portfolio-card h4{font-size:clamp(1.7rem,7vw,2.2rem)}
 }
+
+/* Mantém o texto e a chamada fora do retrato na abertura. */
+@media (min-width:801px){
+  .hero-bottom{width:61%;gap:24px;align-items:center}
+  .hero-bottom p{max-width:calc(100% - 144px)}
+  .hero-bottom .round-link{flex:0 0 120px}
+}

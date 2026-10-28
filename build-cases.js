@@ -10,6 +10,26 @@ const list = items => `<ul class="case-list">${items.map(item => `<li>${item}</l
 const facts = items => `<dl class="case-overview">${items.map(([label, value]) => `<div><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>`;
 
 const cases = {
+  psiu: {
+    title: 'Psiu',
+    description: 'Protótipo de uma experiência para organizar conversas, prioridades e pendências em um só lugar.',
+    tag: 'PRODUTO AUTORAL · PROTÓTIPO',
+    lead: 'Mais clareza para o que pede sua atenção.',
+    role: 'Product Design · UX/UI · Front-end',
+    cover: 'psiu-inicio.png',
+    coverAlt: 'Tela inicial do protótipo Psiu com radar de prioridades e pendências',
+    theme: 'psiu',
+    intro: 'O Psiu reúne mensagens e pendências para ajudar você a perceber prioridades, recuperar o contexto e decidir o próximo passo.',
+    overview: [['Desafio', 'Organizar informações e pendências que chegam por canais diferentes.'], ['Experiência', 'Prioridades, conversas e assistência em uma jornada integrada.'], ['Minha atuação', 'Concepção de produto, design de interface e desenvolvimento do protótipo.']],
+    content: [
+
+      `<section class="psiu-radar"><div class="psiu-radar__intro"><span>01 / PRIORIDADES</span><h2>O que precisa de você,<br><em>em um olhar.</em></h2><p>O radar aproxima do centro as conversas que pedem mais atenção. Ao lado, a próxima conversa e as pendências ajudam a decidir por onde começar.</p></div><figure class="psiu-radar__screen"><img src="../../psiu-inicio.png" alt="Página inicial do Psiu com radar de prioridades e pendências"><figcaption>Visão inicial · protótipo desktop</figcaption></figure></section>`,
+      block('02 / CONVERSAS E ASSISTENTE', 'Encontrar contexto sem trocar de lugar.', '<p>O protótipo apresenta uma área de conversas e uma proposta de assistente para localizar informações, pedir resumos e apoiar a organização. São demonstrados três ambientes, quatro fontes e seis conversas de exemplo.</p>'),
+      `<figure class="psiu-laptop-visual"><img src="../../psiu-notebooks-ia.png" alt="Composição ilustrativa de dois notebooks mostrando conversas e assistente do Psiu"><figcaption>Conversas e assistente em uma mesma experiência. <a href="../../psiu-conversas.png" target="_blank" rel="noopener">Ver tela de conversas ↗</a> <a href="../../psiu-assistente.png" target="_blank" rel="noopener">Ver tela do assistente ↗</a></figcaption></figure>`,
+      block('03 / EXPERIÊNCIA', 'Mais contexto, menos esforço.', '<p>O Psiu aproxima conversas, prioridades e pendências em uma experiência pensada para ajudar a pessoa a decidir o próximo passo com mais clareza.</p><p>Busca, filtros e navegação conectam os assuntos ao seu contexto. O assistente propõe uma forma direta de encontrar informações e retomar conversas em linguagem natural.</p><p>Desenvolvido com HTML, CSS e JavaScript, o protótipo explora essas jornadas em telas adaptadas para desktop e celular.</p>'),
+      `<section class="psiu-mobile-showcase"><div class="psiu-mobile-copy"><span class="section-index">04 / EXPERIÊNCIA MOBILE</span><h2>Clareza que acompanha sua rotina.</h2><p>O radar de prioridades, as conversas e o assistente ganham uma organização adaptada para o celular.</p></div><div class="psiu-mobile-devices"><div class="psiu-device psiu-device--one" role="img" aria-label="Radar de prioridades no celular" tabindex="0"></div><div class="psiu-device psiu-device--two" role="img" aria-label="Conversas no celular" tabindex="0"></div><div class="psiu-device psiu-device--three" role="img" aria-label="Assistente no celular" tabindex="0"></div></div></section>`
+    ]
+  },
   ima: {
     title: 'SIDAGRO / IMA',
     description: 'Case de Product Design, UX Research e Design System para o sistema de defesa agropecuária do IMA.',
@@ -120,10 +140,20 @@ const cases = {
 };
 
 for (const [slug, item] of Object.entries(cases)) {
+  if (['ima', 'alumni', 'eco', 'manejo', 'hive-mind', 'art-screen'].includes(slug)) {
+    const legacy = fs.readFileSync(path.join(root, 'legacy-case.html'), 'utf8')
+      .replace('<head>', '<head>\n  <base href="../../">')
+      .replace("const project = new URLSearchParams(location.search).get('project') || 'ima';", `const project = '${slug}';`);
+    const target = path.join(root, 'cases', slug);
+    fs.mkdirSync(target, { recursive: true });
+    fs.writeFileSync(path.join(target, 'index.html'), legacy);
+    continue;
+  }
+
   const canonical = `${base}cases/${slug}/`;
   const ogImage = `${base}${item.cover}`;
   const coverStem = item.cover.replace(/\.png$/, '');
-  const cover = `<div class="static-cover__media"><img src="../../${coverStem}-1400.webp" srcset="../../${coverStem}-700.webp 700w, ../../${coverStem}-1400.webp 1400w" sizes="(max-width: 800px) 100vw, 50vw" width="1672" height="941" alt="${item.coverAlt}"></div>`;
+  const cover = fs.existsSync(path.join(root, `${coverStem}-1400.webp`)) ? `<div class="static-cover__media"><img src="../../${coverStem}-1400.webp" srcset="../../${coverStem}-700.webp 700w, ../../${coverStem}-1400.webp 1400w" sizes="(max-width: 800px) 100vw, 50vw" width="1672" height="941" alt="${item.coverAlt}"></div>` : `<div class="static-cover__media"><img src="../../${item.cover}" alt="${item.coverAlt}"></div>`;
   const html = `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -141,16 +171,14 @@ for (const [slug, item] of Object.entries(cases)) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="../../case-static.css">
+  <link rel="stylesheet" href="../../case-static.css?v=psiu-25">
   <link rel="stylesheet" href="../../mobile-navigation.css">
 </head>
 <body class="static-case static-case--${item.theme}">
   <header class="nav-shell"><a class="logo" href="../../index.html#inicio" aria-label="Vanessa Souza, voltar ao início">VS<span>°</span></a><nav aria-label="Navegação principal"><a href="../../index.html#sobre">Sobre</a><a href="../../index.html#projetos">Projetos</a><a href="../../index.html#pesquisas">Pesquisas</a><a href="../../index.html#contato">Contato</a></nav><a class="nav-cta" href="mailto:vanessafatima.desouza@gmail.com">Vamos conversar <span aria-hidden="true">↗</span></a></header>
   <main>
-    <header class="static-cover">
-      <div class="static-cover__inner"><a class="static-cover__back" href="../../index.html#projetos">← Todos os projetos</a><div class="static-cover__grid"><div><span class="static-cover__tag">${item.tag}</span><h1>${item.title}</h1><p class="static-cover__lead">${item.lead}</p><p class="static-cover__role">${item.role}</p></div>${cover}</div></div>
-    </header>
-    <div class="case-story"><p class="case-story__intro">${item.intro}</p>${facts(item.overview)}${item.content.join('\n')}<div class="case-story__next"><a href="../../sobre/">Conhecer minha atuação ↗</a></div></div>
+    ${slug === 'psiu' ? `<header class="psiu-cover"><div class="psiu-cover__inner"><a href="../../index.html#projetos" class="psiu-cover__back">← Todos os projetos</a><span class="psiu-cover__number">07 / PRODUTO AUTORAL</span><div class="psiu-cover__grid"><div><h1>psiu<span>.</span></h1><p class="psiu-cover__lead">“Mais clareza para o que pede sua atenção.”</p><div class="psiu-cover__meta"><div><span>TIPO</span><b>Product Design</b></div><div><span>FOCO</span><b>Conversas e prioridades</b></div><div><span>TECNOLOGIA</span><b>HTML · CSS · JavaScript</b></div></div></div><div class="psiu-cover__media"><img src="../../psiu-inicio.png" alt="Página inicial do Psiu com radar de prioridades e pendências"></div></div></div></header><div class="psiu-marquee" aria-label="Temas do projeto">CONVERSAS · PRIORIDADES · CONTEXTO · ASSISTENTE · ORGANIZAÇÃO · PSIu · CONVERSAS · PRIORIDADES · CONTEXTO · ASSISTENTE</div>` : `<header class="static-cover"><div class="static-cover__inner"><a class="static-cover__back" href="../../index.html#projetos">← Todos os projetos</a><div class="static-cover__grid"><div><span class="static-cover__tag">${item.tag}</span><h1>${item.title}</h1><p class="static-cover__lead">${item.lead}</p><p class="static-cover__role">${item.role}</p></div>${cover}</div></div></header>`}
+    <div class="case-story">${slug === 'psiu' ? `<section class="psiu-intro"><div><span class="psiu-intro__label">SOBRE O PROJETO</span><h2>Conversas dispersas.<br><em>Uma visão clara.</em></h2></div><div class="psiu-intro__content"><p>${item.intro}</p>${facts(item.overview)}</div></section>` : `<p class="case-story__intro">${item.intro}</p>${facts(item.overview)}`}${item.content.join('\n')}<div class="case-story__next"><a href="../../sobre/">Conhecer minha atuação ↗</a></div></div>
   </main>
   <footer class="static-footer"><a href="../../index.html#projetos">← Todos os projetos</a><a href="../../index.html#contato">Vamos conversar ↗</a><span>© 2026 Vanessa Souza</span></footer>
 </body>
